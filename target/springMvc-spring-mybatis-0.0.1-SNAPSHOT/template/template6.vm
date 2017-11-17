@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+	<link rel="stylesheet" href="../../css/health/health.css">
+    <link rel="stylesheet" href="../../css/health/health6.css">
+     <script src='../../tinymce/tinymce.min.js'></script>
+   <script type="text/javascript">
+  tinymce.init({
+  selector: 'input', 
+    inline: true
+    });
+</script>
+</head>
+<body>
+
+    <div id="l_head">
+		<div id="l_head_up">
+			<div class="l_outer">
+				<p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+			</div>
+			
+		</div>
+		<div id="l_head_down">
+			<div class="l_outer">
+				<p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+				<ul class="l_nav">
+					<li><a href="../classify.do">患者分类</a></li>
+					<li><a href="../input.do">数据交换</a></li>
+					<li><a href="../template.do">健康资讯</a></li>
+					<li><a href="../unfinish.do">消息提醒</a></li>
+					<li><a href="">权限管理</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	</div>
+	 <div class="h_wrap">
+		<div class="h_top">
+			<a href="../template.do"><h5>健康资讯模板&nbsp;&gt;&nbsp;</h5></a><p>模板六</p>
+		</div>
+		<div class="h_bottom">
+			<div class="h_left">
+				<div class="h_leftcon">
+					<form>
+						<div id="d_tit">单击此处添加标题</div>
+						<textarea id="d_txt"></textarea>
+						<div id="d_ftit">单击此处添加副标题</div>
+						<textarea id="d_ftxt"></textarea>
+						<div class="d_con1">
+							<div class="d_img1">单击此处添加图片<input type="file" name="" id="d_photo"></div>
+							<div class="d_img2">单击此处添加图片<input type="file" name="" id="d_photo"></div>
+						</div>
+						<div id="d_con3">单击此处添加内容</div>
+						<textarea id="d_ctxt"></textarea>
+						<div class="d_con2">
+							<div class="d_img1">单击此处添加图片<input type="file" name="" id="d_photo"></div>
+							<div id="d_con2">单击此处添加内容</div>
+							<textarea id="d_c2txt"></textarea>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="h_right">
+				<div class="h_rightcon">
+					<h3>规则</h3>
+					<p>标题字体统一为24号</p>
+					<p>副标题字体统一为14号</p>
+					<p>内容字体统一为18号</p>
+					<p>图片必须要高清图</p>
+				</div>
+			</div>
+		</div>
+		<div class="h_button">
+			<div class="h_leftbtn">
+				编辑
+			</div>
+			<div class="h_rightbtn" id="text">
+				推送
+			</div>
+		</div>
+	</div>
+	<div id="h_black">
+	</div>
+	<div id="h_popup">
+		<p class="h_tishi"><span>提示</span></p>
+		<p class="h_xunwen"><span>确认推送？</span></p>
+		<div class="h_chose">
+			<div id="h_no">取消</div>
+			<div id="h_yes">确认</div>
+		</div>
+	</div>
+	 
+
+	
+	<div id="l_foot">
+		<p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+	</div>
+    <script src="../../js/health.js"></script>
+	<script type="text/javascript">
+	var tit = document.getElementById('d_tit');
+	var txt = document.getElementById('d_txt'); 
+	tit.onclick = function(e){
+			var e = event || window.event;
+			e.stopPropagation();
+			tit.style.display="none";
+			txt.style.display="block";
+			txt.focus();
+		}
+	var tit1 = document.getElementById('d_ftit');
+	var txt1 = document.getElementById('d_ftxt'); 
+	tit1.onclick = function(e){
+		var e = event || window.event;
+		e.stopPropagation();
+		tit1.style.display="none";
+		txt1.style.display="block";
+		txt1.focus();
+	}
+	var tit2 = document.getElementById('d_con3');
+	var txt2 = document.getElementById('d_ctxt'); 
+	tit2.onclick = function(e){
+		var e = event || window.event;
+		e.stopPropagation();
+		tit2.style.display="none";
+		txt2.style.display="block";
+		txt2.focus();
+	}
+	var tit3 = document.getElementById('d_con2');
+	var txt3 = document.getElementById('d_c2txt'); 
+	tit3.onclick = function(e){
+		var e = event || window.event;
+		e.stopPropagation();
+		tit3.style.display="none";
+		txt3.style.display="block";
+		txt3.focus();
+	}
+	document.onclick = function(){
+		if(txt.value == ""){
+			tit.style.display="block";
+			txt.style.display="none";
+		}else{
+			tit.style.display="none";
+			txt.style.display="block";
+			txt.focus();
+		}
+		if(txt1.value == ""){
+			tit1.style.display="block";
+			txt1.style.display="none";
+		}else{
+			tit1.style.display="none";
+			txt1.style.display="block";
+			txt1.focus();
+		}
+		if(txt2.value == ""){
+			tit2.style.display="block";
+			txt2.style.display="none";
+		}else{
+			tit2.style.display="none";
+			txt2.style.display="block";
+			txt2.focus();
+		}
+		if(txt3.value == ""){
+			tit3.style.display="block";
+			txt3.style.display="none";
+		}else{
+			tit3.style.display="none";
+			txt3.style.display="block";
+			txt3.focus();
+		}
+	}
+</script>
+</body>
+</html>

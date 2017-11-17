@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+	  <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/dataExchange.css">
+    <link rel="stylesheet" type="text/css" href="../../css/page.css"/>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/page.js"></script>
+</head>
+<body>
+		<div id="l_head">
+		<div id="l_head_up">
+			<div class="l_outer">
+				<p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+			</div>
+			
+		</div>
+		<div id="l_head_down">
+			<div class="l_outer">
+				<p class="l_logo"><img src="images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+				<ul class="l_nav">
+					<li><a href="classify.do">患者分类</a></li>
+					<li style="background: #e5e5e4;border-bottom: 4px solid #00a85f;"><a href="input.do">健康报表</a></li>
+					<li><a href="template.do">健康资讯</a></li>
+					<li><a href="message.do">消息提醒</a></li>
+					<li><a>权限管理</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	</div>
+	<div class="c_warp">
+    <div class="c_conter">
+        <div class="c_conterl">
+            <span class="c_tit">报表</span>
+            <div class="c_nvg">
+                <a href="input.do" style="color:#09a25f;">报表一</a>
+                <a href="organ.do" >报表二</a>
+                <a href="danger.do">报表三</a>
+                <a href="history.do">报表四</a>
+            </div>
+        </div>
+        <div class="c_conterr">
+            <div class="c_conterrbb">
+             <table width="850px" border="1px" height="600px" id="tablereport2" style="text-align: center;">
+             <caption>病史统计</caption>
+          		<tr class="tr1"  height="30px">
+          			<td width="70px" >标签1</td>
+          			<td width="110px"></td>
+          			<td width="110px"></td>
+          			<td width="130px">标签4</td>
+          			<td >标签5</td>
+          			<td >标签6</td>
+          			<td >标签7</td>
+          			<td >标签8</td>
+          			<td >标签9</td>
+          		</tr>
+          		<tr height="50px">
+          			<td>按单位</td>
+          			<td>年龄</td>
+          			<td>参加体检人数</td>
+          			<td>高血压患者</td>
+          			<td>糖尿病患者</td>
+          			<td>高血压高危</td>
+          			<td>糖尿病高危</td>
+          			<td>体重高危</td>
+          			<td>膳食高危</td>
+          		</tr>
+          		<tr height="30px">
+          			<td>$!{json1[0].Surveyor}</td>
+          			<td>$!{json1[0].agerange}</td>
+          			<td>$!{json1[0].a1count}</td>
+          			<td>$!{json1[0].flag4}</td>
+          			<td>$!{json1[0].flag5}</td>
+          			<td>$!{json1[0].flag6}</td>
+          			<td>$!{json1[0].flag7}</td>
+          			<td>$!{json1[0].flag8}</td>
+          			<td>$!{json1[0].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>$!{json1[1].agerange}</td>
+          			<td>$!{json1[1].a1count}</td>
+          			<td>$!{json1[1].flag4}</td>
+          			<td>$!{json1[1].flag5}</td>
+          			<td>$!{json1[1].flag6}</td>
+          			<td>$!{json1[1].flag7}</td>
+          			<td>$!{json1[1].flag8}</td>
+          			<td>$!{json1[1].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>$!{json1[2].agerange}</td>
+          			<td>$!{json1[2].a1count}</td>
+          			<td>$!{json1[2].flag4}</td>
+          			<td>$!{json1[2].flag5}</td>
+          			<td>$!{json1[2].flag6}</td>
+          			<td>$!{json1[2].flag7}</td>
+          			<td>$!{json1[2].flag8}</td>
+          			<td>$!{json1[2].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>$!{json1[3].agerange}</td>
+          			<td>$!{json1[3].a1count}</td>
+          			<td>$!{json1[3].flag4}</td>
+          			<td>$!{json1[3].flag5}</td>
+          			<td>$!{json1[3].flag6}</td>
+          			<td>$!{json1[3].flag7}</td>
+          			<td>$!{json1[3].flag8}</td>
+          			<td>$!{json1[3].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>小计</td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          		</tr>
+          		<tr height="30px">
+          			<td>$!{json1[4].Surveyor}</td>
+          			<td>$!{json1[4].agerange}</td>
+          			<td>$!{json1[4].a1count}</td>
+          			<td>$!{json1[4].flag4}</td>
+          			<td>$!{json1[4].flag5}</td>
+          			<td>$!{json1[4].flag6}</td>
+          			<td>$!{json1[4].flag7}</td>
+          			<td>$!{json1[4].flag8}</td>
+          			<td>$!{json1[4].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>$!{json1[5].agerange}</td>
+          			<td>$!{json1[5].a1count}</td>
+          			<td>$!{json1[5].flag4}</td>
+          			<td>$!{json1[5].flag5}</td>
+          			<td>$!{json1[5].flag6}</td>
+          			<td>$!{json1[5].flag7}</td>
+          			<td>$!{json1[5].flag8}</td>
+          			<td>$!{json1[5].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>$!{json1[6].agerange}</td>
+          			<td>$!{json1[6].a1count}</td>
+          			<td>$!{json1[6].flag4}</td>
+          			<td>$!{json1[6].flag5}</td>
+          			<td>$!{json1[6].flag6}</td>
+          			<td>$!{json1[6].flag7}</td>
+          			<td>$!{json1[6].flag8}</td>
+          			<td>$!{json1[6].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>$!{json1[7].agerange}</td>
+          			<td>$!{json1[7].a1count}</td>
+          			<td>$!{json1[7].flag4}</td>
+          			<td>$!{json1[7].flag5}</td>
+          			<td>$!{json1[7].flag6}</td>
+          			<td>$!{json1[7].flag7}</td>
+          			<td>$!{json1[7].flag8}</td>
+          			<td>$!{json1[7].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>$!{json1[8].agerange}</td>
+          			<td>$!{json1[8].a1count}</td>
+          			<td>$!{json1[8].flag4}</td>
+          			<td>$!{json1[8].flag5}</td>
+          			<td>$!{json1[8].flag6}</td>
+          			<td>$!{json1[8].flag7}</td>
+          			<td>$!{json1[8].flag8}</td>
+          			<td>$!{json1[8].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>小计</td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          		</tr>
+          		<tr height="30px">
+          			<td>$!{json1[9].Surveyor}</td>
+          			<td>$!{json1[9].agerange}</td>
+          			<td>$!{json1[9].a1count}</td>
+          			<td>$!{json1[9].flag4}</td>
+          			<td>$!{json1[9].flag5}</td>
+          			<td>$!{json1[9].flag6}</td>
+          			<td>$!{json1[9].flag7}</td>
+          			<td>$!{json1[9].flag8}</td>
+          			<td>$!{json1[9].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>$!{json1[10].agerange}</td>
+          			<td>$!{json1[10].a1count}</td>
+          			<td>$!{json1[10].flag4}</td>
+          			<td>$!{json1[10].flag5}</td>
+          			<td>$!{json1[10].flag6}</td>
+          			<td>$!{json1[10].flag7}</td>
+          			<td>$!{json1[10].flag8}</td>
+          			<td>$!{json1[10].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>$!{json1[11].agerange}</td>
+          			<td>$!{json1[11].a1count}</td>
+          			<td>$!{json1[11].flag4}</td>
+          			<td>$!{json1[11].flag5}</td>
+          			<td>$!{json1[11].flag6}</td>
+          			<td>$!{json1[11].flag7}</td>
+          			<td>$!{json1[11].flag8}</td>
+          			<td>$!{json1[11].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>$!{json1[12].agerange}</td>
+          			<td>$!{json1[12].a1count}</td>
+          			<td>$!{json1[12].flag4}</td>
+          			<td>$!{json1[12].flag5}</td>
+          			<td>$!{json1[12].flag6}</td>
+          			<td>$!{json1[12].flag7}</td>
+          			<td>$!{json1[12].flag8}</td>
+          			<td>$!{json1[12].flag9}</td>
+          		</tr>
+          		<tr height="30px">
+          			<td></td>
+          			<td>小计</td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          			<td></td>
+          		</tr>
+         	</table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="l_foot">
+	<p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+</body>
+</html>

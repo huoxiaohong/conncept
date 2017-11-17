@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+	  <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/dataExchange.css">
+    <link rel="stylesheet" type="text/css" href="../../css/kkpager_orange.css">
+    <link rel="stylesheet" type="text/css" href="../../css/page.css"/>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/page.js"></script>
+    <script src="../../js/kkpager.js"></script>
+</head>
+<body>
+		<div id="l_head">
+		<div id="l_head_up">
+			<div class="l_outer">
+				<p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+			</div>
+			
+		</div>
+		<div id="l_head_down">
+			<div class="l_outer">
+				<p class="l_logo"><img src="images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+				<ul class="l_nav">
+					<li><a href="classify.do">患者分类</a></li>
+					<li><a href="input.do">健康报表</a></li>
+					<li><a href="template.do">健康资讯</a></li>
+					<li><a href="unfinish.do">消息提醒</a></li>
+					<li><a>权限管理</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	</div>
+	<div class="c_warp">
+    <div class="c_conter">
+        <div class="c_conterl">
+            <span class="c_tit">报表</span>
+            <div class="c_nvg">
+                <a class="c_nvgl" href="input.do">报表一</a>
+                <a href="toDataOutput.do">报表二</a>
+            </div>
+        </div>
+        <div class="c_conterr">
+            <div class="c_conterrbb">
+               <ul class="c_conterrb">
+               #foreach($li in $dataList)
+                <li><span class="c_conterrbs1" value="${li.id}">${li.name}</span><span class="c_conterrbs2">...............................................................</span><a href="toDataInput.do?id=${li.id}&name=${li.name}"><img src="../../images/jion_03.jpg" alt="进入"></a></li>
+                #end
+                </ul>
+                <div id="fy">
+                	<ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="l_foot">
+	<p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+<script type="text/javascript">
+    var GG = {
+        "kk":function(mm){
+            window.location.href='input.do?startRecord='+(10*(mm-1))+'&pageSize='+10+'&currentPage='+mm;
+        }
+    }
+    $("#page").initPage($count,$page.currentPage,GG.kk);
+    </script>
+</body>
+</html>

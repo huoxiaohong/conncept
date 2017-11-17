@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>患者分类</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/l_main_page.css">
+    <link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+    <link rel="stylesheet" type="text/css" href="../../css/page.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/component.css"/>
+    <script src="../../js/modernizr.custom.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/l_main_page.js"></script>
+    <script src="../../js/page.js"></script>
+    <script src="../../js/news.js"></script>
+
+</head>
+<body>
+<div id="l_head">
+    <div id="l_head_up">
+        <div class="l_outer">
+            <p class="l_exit">欢迎您，<span>超级管理员</span><a>退出登陆</a></p>
+        </div>
+    </div>
+    <div id="l_head_down">
+        <div class="l_outer">
+            <p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+            <ul class="l_nav">
+                <li style="background: #e5e5e4;border-bottom: 4px solid #00a85f;"><a href="classify.do">患者分类</a></li>
+                <li><a href="input.do">健康报表</a></li>
+                <li><a href="template.do">健康资讯</a></li>
+                <li><a href="message.do">消息提醒</a></li>
+                <li><a>权限管理</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="l_body">
+    <div id="l_outer">
+        <ul class="l_l_nav" id="entity">
+            <li>患者标签</li>
+            #if(1 == ${entity})
+                <li><a href="classify.do?entity=1" style="color:#09a25f;">高血压患者</a></li>
+            #else
+                <li><a href="classify.do?entity=1">高血压患者</a></li>
+            #end
+
+            #if(2 == ${entity})
+                <li><a href="classify.do?entity=2" style="color:#09a25f;">高血压高危</a></li>
+            #else
+                <li><a href="classify.do?entity=2">高血压高危</a></li>
+            #end
+
+            #if(3 == ${entity})
+                <li><a href="classify.do?entity=3" style="color:#09a25f;">糖尿病患者</a></li>
+            #else
+                <li><a href="classify.do?entity=3">糖尿病患者</a></li>
+            #end
+
+            #if(4 == ${entity})
+                <li><a href="classify.do?entity=4" style="color:#09a25f;">糖尿病高危</a></li>
+            #else
+                <li><a href="classify.do?entity=4">糖尿病高危</a></li>
+            #end
+
+            #if(5 == ${entity})
+                <li><a href="classify.do?entity=5" style="color:#09a25f;">高盐膳食高危</a></li>
+            #else
+                <li><a href="classify.do?entity=5">高盐膳食高危</a></li>
+            #end
+
+            #if(6 == ${entity})
+                <li><a href="classify.do?entity=6" style="color:#09a25f;">肥胖高危</a></li>
+            #else
+                <li><a href="classify.do?entity=6">肥胖高危</a></li>
+            #end
+
+            #if(7 == ${entity})
+                <li><a href="classify.do?entity=7" style="color:#09a25f;">高危人群</a></li>
+            #else
+                <li><a href="classify.do?entity=7">高危人群</a></li>
+            #end
+
+        </ul>
+        <div class="hh_right">
+            <div id="hh_paixu">
+                <p id="hh_pdown">排序方式</p>
+                <ul class="hh_pp">
+                    <li><span
+                            onclick='location.href="classify.do?value=name&initalState=${initalState}&entity=${entity}"'>姓名</span>
+                    </li>
+                    <li><span
+                            onclick='location.href="classify.do?value=symptom&initalState=${initalState}&entity=${entity}"'>症状</span>
+                    </li>
+                    <li><span
+                            onclick='location.href="classify.do?value=sdate&initalState=${initalState}&entity=${entity}"'>日期</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="hh_saixuan">
+                <p id="hh_sdown">筛选</p>
+                <ul class="hh_ss">
+                    <li><span
+                            onclick='location.href="classify.do?initalState=1&value=${value}&entity=${entity}"'>健康</span>
+                    </li>
+                    <li><span
+                            onclick='location.href="classify.do?initalState=2&value=${value}&entity=${entity}"'>患者</span>
+                    </li>
+                    <li><span
+                            onclick='location.href="classify.do?initalState=3&value=${value}&entity=${entity}"'>高危</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="hh_rtop">
+                <div id="sb-search" class="sb-search">
+                    <form action="classify.do" method="post">
+                        <input class="sb-search-input" placeholder="请输入用户名" type="text" name="vague"
+                               id="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span id="sb-icon-search" class="sb-icon-search" style="font-size: 15px;">搜索</span>
+                    </form>
+                </div>
+                <select name="" id="hh_screen">
+                    <option value="1">单位</option>
+                    <option value="2">社区</option>
+                    <option value="3">医院</option>
+                </select>
+                <select name="" id="hh_sort">
+                    <option value="1">姓名</option>
+                    <option value="2">症状</option>
+                    <option value="3">日期</option>
+                </select>
+            </div>
+            <div class="hh_rcon">
+                <table>
+                    <tr>
+                        <th>序号</th>
+                        <th>姓名</th>
+                        <th>症状</th>
+                        <th>日期</th>
+                        <th>初检</th>
+                        <th>操作</th>
+                    </tr>
+                    #foreach($patient in $listPatient)
+                        <tr>
+                            <td></td>
+                            <td>${patient.get("name")}</td>
+                            <td>${patient.get("symptom")}</td>
+                            <td>${patient.get("sdate")}</td>
+                            #if('1'==$patient.get("initalState"))
+                                <td>
+                                    <div style="background:green;">健康</div>
+                                </td>
+                            #elseif('2'==$patient.get("initalState"))
+                                <td>
+                                    <div style="background:orange;">患者</div>
+                                </td>
+                            #elseif('3'==$patient.get("initalState"))
+                                <td>
+                                    <div style="background:red;">高危</div>
+                                </td>
+                            #end
+                            <td><span id="examine" onclick='location.href="report.do?_id=${patient.get(
+                                '_id')}&entity=${entity}"'>查看</span></td>
+                        </tr>
+                    #end
+                </table>
+                <div id="fy">
+                    <ul class="page" maxshowpageitem="5" pagelistcount="10" id="page"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="l_foot">
+    <p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+<script src="../../js/classie.js"></script>
+<script src="../../js/uisearch.js"></script>
+<script>
+    new UISearch(document.getElementById('sb-search'));
+</script>
+<script type="text/javascript">
+    var GG = {
+        "kk": function (mm) {
+            window.location.href = 'classify.do?entity=${entity}&value=${value}&initalState=${initalState}&startRecord=' + (10 * (mm - 1)) + '&pageSize=' + 10 + '&currentPage=' + mm;
+        }
+    }
+    jQuery("#page").initPage($count,$page.currentPage , GG.kk);
+</script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        var len = jQuery('table tr').length;
+        for (var i = 1; i < len; i++) {
+            jQuery('table tr:eq(' + i + ') td:first').text(i);
+        }
+    });
+</script>
+</body>
+</html>

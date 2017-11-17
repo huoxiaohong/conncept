@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/l_main_page.css">
+	<link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+	<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../../js/l_main_page.js"></script>
+</head>
+<body>
+	<div id="l_head">
+		<div id="l_head_up">
+			<div class="l_outer">
+				<p class="l_exit">欢迎您，<span>超级管理员</span><a href="###">退出登陆</a></p>
+			</div>
+			
+		</div>
+		<div id="l_head_down">
+			<div class="l_outer">
+				<p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+				<ul class="l_nav">
+					<li><a href="###">患者分类</a></li>
+					<li><a href="###">数据交换</a></li>
+					<li><a href="###">健康资讯</a></li>
+					<li><a href="###">消息提醒</a></li>
+					<li><a href="###">权限管理</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	</div>
+	<div id="l_body">
+		<div id="l_outer">
+			<ul class="l_l_nav">
+				<li>患者标签</li>
+				<li><a href="###">高血压患者</a></li>
+				<li><a href="###">高血压高危</a></li>
+				<li><a href="###">糖尿病患者</a></li>
+				<li><a href="###">糖尿病高危</a></li>
+				<li><a href="###">高盐膳食高危</a></li>
+				<li><a href="###">肥胖高危</a></li>
+				<li><a href="###">高危人群</a></li>
+			</ul>
+			<div class="l_r_con">
+				<form action="###" method="###">
+					<div class="select">
+						<select name="sort1" id="select1">
+
+						</select>
+						<select name="sort2" id="select2">
+							
+						</select>
+
+						<div class="new_select">
+							<dl class="dl1">
+								<dt  class="dt2">
+									排序方式
+								</dt>
+								<dd>
+									高危
+								</dd>
+								<dd>
+									患者
+								</dd>
+								<dd>
+									健康
+								</dd>
+							</dl>
+							<dl class="dl2">
+								<dt class="dt1">
+									筛选
+								</dt>
+								<dd>
+									单位
+								</dd>
+								<dd>
+									社区
+								</dd>
+								<dd>
+									医院
+								</dd>
+							</dl>
+						</div>
+						<p class="pp">
+							排序方式
+							<input type="text" name="search" value=" " class="ipt">	
+						</p>
+						
+						
+						<button class="ss">搜索</button>	
+					</div>
+					
+					<table>
+						<tr>
+							<td>序号</td>
+							<td>姓名</td>
+							<td>症状</td>
+							<td>日期</td>
+							<td>初检</td>
+							<td>操作</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>李富贵</td>
+							<td>头疼胸闷血压150/95;葡萄糖5.29;总胆固...</td>
+							<td>2017.05.27</td>
+							<td><span>患者</span></td>
+							<td><a href="health_report.html">查看</a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>李富贵</td>
+							<td>头疼胸闷血压150/95;葡萄糖5.29;总胆固...</td>
+							<td>2017.05.27</td>
+							<td><span>患者</span></td>
+							<td><a href="health_report.html">查看</a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>李富贵</td>
+							<td>头疼胸闷血压150/95;葡萄糖5.29;总胆固...</td>
+							<td>2017.05.27</td>
+							<td><span>患者</span></td>
+							<td><a href="health_report.html">查看</a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>李富贵</td>
+							<td>头疼胸闷血压150/95;葡萄糖5.29;总胆固...</td>
+							<td>2017.05.27</td>
+							<td><span>患者</span></td>
+							<td><a href="health_report.html">查看</a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>李富贵</td>
+							<td>头疼胸闷血压150/95;葡萄糖5.29;总胆固...</td>
+							<td>2017.05.27</td>
+							<td><span>患者</span></td>
+							<td><a href="health_report.html">查看</a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>李富贵</td>
+							<td>头疼胸闷血压150/95;葡萄糖5.29;总胆固...</td>
+							<td>2017.05.27</td>
+							<td><span>患者</span></td>
+							<td><a href="health_report.html">查看</a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>李富贵</td>
+							<td>头疼胸闷血压150/95;葡萄糖5.29;总胆固...</td>
+							<td>2017.05.27</td>
+							<td><span>患者</span></td>
+							<td><a href="health_report.html">查看</a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>李富贵</td>
+							<td>头疼胸闷血压150/95;葡萄糖5.29;总胆固...</td>
+							<td>2017.05.27</td>
+							<td><span>患者</span></td>
+							<td><a href="health_report.html">查看</a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>李富贵</td>
+							<td>头疼胸闷血压150/95;葡萄糖5.29;总胆固...</td>
+							<td>2017.05.27</td>
+							<td><span>患者</span></td>
+							<td><a href="health_report.html">查看</a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>李富贵</td>
+							<td>头疼胸闷血压150/95;葡萄糖5.29;总胆固...</td>
+							<td>2017.05.27</td>
+							<td><span>患者</span></td>
+							<td><a href="health_report.html">查看</a></td>
+						</tr>
+					</table>
+					<div class="page">
+						<a href="###">上一页</a>
+						<a href="###">1</a>
+						<a href="###">2</a>
+						<a href="###">3</a>
+						<a href="###">4</a>
+						<a href="###">...</a>
+						<a href="###">10</a>
+						<a href="###">下一页</a>
+						<span class="span1">共17页</span>
+						<span>第<input type="text" name="sp" value="">页</span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="l_foot">
+		<p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+	</div>
+</body>
+</html>

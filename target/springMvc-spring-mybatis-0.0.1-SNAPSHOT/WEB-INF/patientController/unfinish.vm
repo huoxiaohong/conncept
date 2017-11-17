@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>消息提醒</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../css/news/news.css">
+    <link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+    <link rel="stylesheet" type="text/css" href="../../css/page.css"/>
+    <link rel="stylesheet" type="text/css" href="css/component.css"/>
+    <script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+<div id="l_head">
+    <div id="l_head_up">
+        <div class="l_outer">
+            <p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+        </div>
+
+    </div>
+    <div id="l_head_down">
+        <div class="l_outer">
+            <p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+            <ul class="l_nav">
+                <li><a href="classify.do">患者分类</a></li>
+                <li><a href="input.do">健康报表</a></li>
+                <li><a href="template.do">健康资讯</a></li>
+                <li style="background: #e5e5e4;border-bottom: 4px solid #00a85f;"><a href="message.do">消息提醒</a></li>
+                <li><a>权限管理</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div id="hh_wrap">
+    <div class="hh_left">
+        <p>消息提醒</p>
+        #if(0 == ${state})
+            <a href="message.do?state=0"><p style="color:#09a25f;">未完成</p></a>
+        #else
+            <a href="message.do?state=0"><p>未完成</p></a>
+        #end
+
+        #if(1 == ${state})
+            <a href="message.do?state=1"><p style="color:#09a25f;">已完成</p></a>
+        #else
+            <a href="message.do?state=1"><p>已完成</p></a>
+        #end
+
+    </div>
+    <div class="hh_right">
+        <div id="hh_paixu">
+            <p id="hh_pdown">排序方式</p>
+            <ul class="hh_pp" id="hh_pp">
+                <li><span
+                        onclick='location.href="message.do?value=name&initalState=${initalState}&state=${state}"'>姓名</span>
+                </li>
+                <li><span onclick='location.href="message.do?value=symptom&initalState=${initalState}&state=${state}"'>症状</span>
+                </li>
+                <li><span
+                        onclick='location.href="message.do?value=sdate&initalState=${initalState}&state=${state}"'>日期</span>
+                </li>
+            </ul>
+        </div>
+        <div id="hh_saixuan">
+            <p id="hh_sdown">筛选</p>
+            <ul class="hh_ss" id="hh_ss">
+                <li><span onclick='location.href="message.do?initalState=1&value=${value}&state=${state}"'>健康</span>
+                </li>
+                <li><span onclick='location.href="message.do?initalState=2&value=${value}&state=${state}"'>患者</span>
+                </li>
+                <li><span onclick='location.href="message.do?initalState=3&value=${value}&state=${state}"'>高危</span>
+                </li>
+            </ul>
+        </div>
+        <div class="hh_rtop">
+            <div id="sb-search" class="sb-search">
+                <form action="message.do" method="post">
+                    <input class="sb-search-input" placeholder="请输入用户名" type="text" value="${vague}" name="vague"
+                           id="search">
+                    <input class="sb-search-submit" type="submit" value="">
+                    <span id="sb-icon-search" class="sb-icon-search" style="font-size: 15px;">搜索</span>
+                </form>
+            </div>
+            <select name="" id="hh_screen">
+                <option value="1">单位</option>
+                <option value="2">社区</option>
+                <option value="3">医院</option>
+            </select>
+            <select name="" id="hh_sort">
+                <option value="1">姓名</option>
+                <option value="2">症状</option>
+                <option value="3">日期</option>
+            </select>
+        </div>
+        <div class="hh_rcon">
+            <table>
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>症状</th>
+                    <th>日期</th>
+                    <th>初检</th>
+                    <th>状态</th>
+                </tr>
+            <tr>
+                #foreach($mess in $message)
+                    <tr>
+                        <td></td>
+                        <td>$!{mess.get("name")}</td>
+                        <td>$!{mess.get("symptom")}</td>
+                        <td>$!{mess.get("sdate")}</td>
+                        #if('1'==$mess.get("initalState"))
+                            <td>
+                                <div style="background:green;">健康</div>
+                            </td>
+                        #elseif('2'==$mess.get("initalState"))
+                            <td>
+                                <div style="background:orange;">患者</div>
+                            </td>
+                        #elseif('3'==$mess.get("initalState"))
+                            <td>
+                                <div style="background:red;">高危</div>
+                            </td>
+                        #end
+                        #if (${mess.get("state")}=="0")
+                            <td><span id="unfinish"
+                                      onclick='location.href="unfinishReport.do?_id=${mess.get('_id')}&state=${state}"'>未完成</span>
+                            </td>
+                        #elseif (${mess.get("state")}=="1")
+                            <td><span id="finish"
+                                      onclick='location.href="unfinishReport.do?_id=${mess.get('_id')}&state=${state}"'>已完成</span>
+                            </td>
+                        #end
+                    </tr>
+                #end
+            </table>
+            <div id="fy">
+                <ul class="page" maxshowpageitem="5" pagelistcount="10" id="page"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="l_foot">
+    <p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/page.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/uisearch.js"></script>
+<script>
+    new UISearch(document.getElementById('sb-search'));
+</script>
+<script type="text/javascript">
+    var GG = {
+        "kk": function (mm) {
+            window.location.href = 'message.do?state=${state}&value=${value}&initalState=${initalState}&startRecord=' + (10 * (mm - 1)) + '&pageSize=' + 10 + '&currentPage=' + mm;
+        }
+    }
+    jQuery("#page").initPage($count,$page.currentPage , GG.kk);
+</script>
+<script type="text/javascript">
+    jQuery(function () {
+        var len = jQuery('table tr').length;
+        for (var i = 1; i < len; i++) {
+            jQuery('table tr:eq(' + i + ') td:first').text(i - 1);
+        }
+    });
+</script>
+<script src="../../js/news.js"></script>
+</body>
+</html>

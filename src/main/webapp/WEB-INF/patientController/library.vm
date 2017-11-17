@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>健康报告单患者（字典库）</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/cz.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public_page.css">
+</head>
+<body>
+<div id="l_head">
+    <div id="l_head_up">
+        <div class="l_outer">
+            <p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+        </div>
+    </div>
+    <div id="l_head_down">
+        <div class="l_outer">
+            <p class="l_logo"><img src="images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+            <ul class="l_nav">
+                <li style="background: #e5e5e4;border-bottom: 4px solid #00a85f;"><a href="classify.do">患者分类</a></li>
+                <li><a href="input.do">健康报表</a></li>
+                <li><a href="template.do">健康资讯</a></li>
+                <li><a href="message.do">消息提醒</a></li>
+                <li><a>权限管理</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="w_head">
+    <a href="classify.do" class="w_a1"> 患者分类 ></a>
+    <a href="classify.do" class="w_a1"> 高血压患者 ></a>
+    <a href="report.do" class="w_a1"> 健康报告单 ></a>
+    <a href="" class="w_a2"> 字典库</a>
+</div>
+<div class="w_mid">
+    <div class="w_li1">
+        <p class="w_h2">首字母</p>
+        <p class="w_nr">内容</p>
+        <p class="w_cz">操作</p>
+        <p class="w_select">
+            <img src="images/wx.png" alt="" class="w_x">
+            <img src="images/ws.png" alt="" class="w_s">
+        </p>
+        <div class="w_dw">
+            <div class="w_tj">添加</div>
+            <div class="w_gx">更新</div>
+        </div>
+    </div>
+    <ul class="w_ul1" id="ulw">
+        #foreach($li in $list)
+            <li class="w_li2">
+                <input type="hidden" value="${li.id}">
+                <p class="w_p">${li.initial}</p>
+                <p class="w_xy" onclick="location.href='toUpdateAndDelete.do?id=${li.id}'">
+                    <span>${li.title}</span>
+                    <span class="w_span1">${li.content}</span>
+                </p>
+            </li>
+        #end
+    </ul>
+</div>
+<div id="l_foot">
+    <p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+<script src="js/jquery-1.8.3.js"></script>
+<script>
+    $(function () {
+        $(".w_span1").each(function () {
+            var maxwidth = 37;
+            if ($(this).text().length > maxwidth) {
+                $(this).text($(this).text().substring(0, maxwidth));
+                $(this).vm($(this).vm() + '。。。');
+            }
+        });
+    });
+</script>
+<script>
+    var wx = document.getElementsByClassName('w_x');
+    var ws = document.getElementsByClassName('w_s');
+    var sel = document.getElementsByClassName('w_select');
+    var dw = document.getElementsByClassName('w_dw');
+    var tj = document.getElementsByClassName('w_tj');
+    var gx = document.getElementsByClassName('w_gx');
+
+    tj[0].onclick = function () {
+        window.location.href = 'toAddDictionaryLibrary.do';
+    }
+    wx[0].onclick = function () {
+        wx[0].style.display = 'none';
+        ws[0].style.display = 'block';
+        dw[0].style.display = 'block';
+    }
+    ws[0].onclick = function () {
+        wx[0].style.display = 'block';
+        ws[0].style.display = 'none';
+        dw[0].style.display = 'none';
+    }
+</script>
+</body>
+</html>

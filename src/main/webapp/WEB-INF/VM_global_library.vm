@@ -1,0 +1,3 @@
+#macro(url_home)${request.scheme}://${request.serverName}:${request.serverPort}$request.contextPath#end
+#macro(setBasePath)#set($basePath = ${request.scheme}+"://"+${request.serverName}+
+    ":"+${request.serverPort}+$request.contextPath)#end

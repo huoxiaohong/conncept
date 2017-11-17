@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+	<link rel="stylesheet" href="../../css/health/health.css">
+    <link rel="stylesheet" href="../../css/health/template.css">
+    <script src='../../tinymce/tinymce.min.js'></script>
+     <script type="text/javascript">
+  tinymce.init({
+    selector: '#myeditable-h1',
+    inline: true
+   });
+
+  tinymce.init({
+    selector: '#myeditable-h2',
+    inline: true
+  });
+
+
+  tinymce.init({
+    selector: '#myeditable-div',
+    inline: true
+  });
+
+  tinymce.init({
+    selector: '#myeditable-h3',
+    inline: true
+  });
+
+  tinymce.init({
+    selector: '#myeditable-h4',
+    inline: true
+  });
+
+    tinymce.init({
+    selector: '#myeditable-h5',
+    inline: true
+  });
+
+  tinymce.init({
+  selector: 'input',  // change this value according to your HTML
+    inline: true,
+  images: function (blobInfo, success, failure) {
+    var xhr, formData;
+    xhr = new XMLHttpRequest();
+    xhr.withCredentials = false;
+    xhr.open('POST', 'postAcceptor.php');
+    xhr.onload = function() {
+      var json;
+
+      if (xhr.status != 200) {
+        failure('HTTP Error: ' + xhr.status);
+        return;
+      }
+      json = JSON.parse(xhr.responseText);
+
+      if (!json || typeof json.location != 'string') {
+        failure('Invalid JSON: ' + xhr.responseText);
+        return;
+      }
+      success(json.location);
+    };
+    formData = new FormData();
+    formData.append('file', blobInfo.blob(), fileName(blobInfo));
+    xhr.send(formData);
+  }
+});
+  </script>
+</head>
+<body>
+	<div id="l_head">
+		<div id="l_head_up">
+			<div class="l_outer">
+				<p class="l_exit">欢迎您，<span>超级管理员</span><a href="###">退出登陆</a></p>
+			</div>
+			
+		</div>
+		<div id="l_head_down">
+			<div class="l_outer">
+				<p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+				<ul class="l_nav">
+					<li><a href="../classify.do">患者分类</a></li>
+					<li><a href="../input.do">数据交换</a></li>
+					<li><a href="../template.do">健康资讯</a></li>
+					<li><a href="../unfinish.do">消息提醒</a></li>
+					<li><a>权限管理</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	</div>
+	
+	<div class="h_wrap">
+		<div class="h_top">
+			<a href="../template.do"><h5>健康资讯模板&nbsp;&gt;&nbsp;</h5></a><p>模板一</p>
+		</div>
+	<form action=""  method="post">
+		  <div class="h_bottom">
+			<div class="h_left">
+				<div class="h_leftcon">
+					<div class="h_lconp1 " id="myeditable-h1">单击此处添加标题</div>
+					<div class="h_lconp2"  id="myeditable-h2">单击此处添加副标题</div>
+					<div class="h_lccon1">
+						<div class="h_lccleft1">
+							<span>单击此处添加图片<input class ="input" type="file" accept="images/*" capture="photo"></span>
+							<!-- <img src="../../images/health/test.jpg" alt=""> -->
+						</div>
+						<div class="h_lccright1">
+						<span id="myeditable-h3">单击此处添加内容</span>
+						</div>
+					</div>
+					<div class="h_lccon2">
+						<div class="h_lccleft2">
+							<span>单击此处添加图片<input class ="input" type="file" accept="images/*" capture="photo"></span>
+							<!-- <img src="../../images/health/test.jpg" alt=""> -->
+						</div>
+						<div class="h_lccright2">
+							  <span id="myeditable-h4">单击此处添加内容</span>
+						</div>
+					</div>
+					<div class="h_lccon2 h_lccon3">
+						<div class="h_lccleft2">
+						<span>单击此处添加图片<input class ="input" type="file" accept="images/*" capture="photo"></span>
+							<!-- <img src="../../images/health/test.jpg" alt=""> -->
+						</div>
+						<div class="h_lccright2">
+							<span id="myeditable-h5">单击此处添加内容</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="h_right">
+				<div class="h_rightcon">
+					<h3>规则</h3>
+					<p>标题字体统一为24号</p>
+					<p>副标题字体统一为14号</p>
+					<p>内容字体统一为18号</p>
+					<p>图片必须要高清图</p>
+				</div>
+			</div>
+		</div>
+		<div class="h_button">
+			<div class="h_leftbtn">
+				编辑
+			</div>
+			<div class="h_rightbtn" id="text">
+				推送
+			</div>
+		</div>
+	</div>
+	<div id="h_black">
+	</div>
+	<div id="h_popup">
+		<p class="h_tishi"><span>提示</span></p>
+		<p class="h_xunwen"><span>确认推送？</span></p>
+		<div class="h_chose">
+			<div id="h_no">取消</div>
+			<div id="h_yes">确认</div>
+		</div>
+	</div>
+  </form>	
+	
+	<div id="l_foot">
+		<p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+	</div>
+    <script src="../../js/health.js"></script>
+</body>
+</html>

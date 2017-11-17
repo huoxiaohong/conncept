@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+	<link rel="stylesheet" href="../../css/health/health.css">
+    <link rel="stylesheet" href="../../css/health/health7.css">
+    <script src='../../tinymce/tinymce.min.js'></script>
+       <script type="text/javascript">
+  tinymce.init({
+  selector: '.wmd_tmplate', 
+    inline: true
+      });
+</script>
+   
+</head>
+<body>
+    <div id="l_head">
+		<div id="l_head_up">
+			<div class="l_outer">
+				<p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+			</div>
+			
+		</div>
+		<div id="l_head_down">
+			<div class="l_outer">
+				<p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+				<ul class="l_nav">
+					<li><a href="../classify.do ">患者分类</a></li>
+					<li><a href="../input.do ">数据交换</a></li>
+					<li><a href="../template.do ">健康资讯</a></li>
+					<li><a href="../unfinish.do ">消息提醒</a></li>
+					<li><a href="">权限管理</a></li>
+				</ul>
+			</div>		
+		</div>
+	</div>
+<form method="post" action="../addpage.do?id=$!{id}">
+	<div class="h_wrap">
+		<div class="h_top">
+			<a href="../template.do"><h5>健康资讯模板&nbsp;&gt;&nbsp;</h5></a><p>模板七</p>
+			<select name="types">
+				  <option value="1">健康咨询</option>
+				  <option value="2">社区活动</option>
+				  <option value="3">健康饮食</option>
+				  <option value="4">生活习惯</option>
+				  <option value="5">养生健康</option>
+			</select>
+		</div>
+		<div class="h_bottom">
+			<div class="h_left">
+				<div class="h_leftcon">
+						<div id="tle_box1" class="wmd_tmplate">单击此处添加标题</div>
+						<div id="tle_box2" class="wmd_tmplate">单击此处添加副标题</div>
+						<div id="tle_box3">
+							<div id="tle_txt1" class="wmd_tmplate">单击此处添加内容</div>
+							<div id="tle_img1" id="d_photo" class="wmd_tmplate">单击此处添加图片<input type="file" name="" id="d_photo"></div>
+						</div>
+						<div id="tle_box4">
+							<div id="tle_img2" id="d_photo" class="wmd_tmplate">单击此处添加图片<input type="file" name="" id="d_photo"></div>
+							<div id="tle_txt2" class="wmd_tmplate">单击此处添加内容</div>
+						</div>
+						<div id="tle_box5" class="wmd_tmplate">单击此处添加内容</div>
+						<div id="tlestate" class="myeditablediv">0</div>
+						<div id="tleid" class="myeditablediv">${id}</div>
+				</div>
+			</div>
+			<div class="h_right">
+				<div class="h_rightcon">
+					<h3>规则</h3>
+					<p>标题字体统一为24号</p>
+					<p>副标题字体统一为14号</p>
+					<p>内容字体统一为18号</p>
+					<p>图片必须要高清图</p>
+				</div>
+			</div>
+		</div>
+		<div class="h_button">
+			<div class="h_leftbtn">
+				推送
+			</div>
+			<div class="h_rightbtn" id="text">
+				保存
+			</div>
+		</div>
+	</div>
+	<div id="h_black">
+	</div>
+	<div id="h_popup">
+		<p class="h_tishi"><span>提示</span></p>
+		<p class="h_xunwen"><span>确认推送？</span></p>
+		<div class="h_chose">
+			<div id="h_no">取消</div>
+			<input id="h_yes" type="submit" value="确认">
+		</div>
+	</div>   
+	</form>
+	<div id="l_foot">
+		<p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+	</div>
+    <script src="../../js/health.js"></script>
+</body>
+</html>

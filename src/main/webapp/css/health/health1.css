@@ -1,0 +1,133 @@
+#tletitle {
+	width: 579px;
+	height: 53px;
+	font-size: 24px;
+	float: left;
+	margin: 20px 50px;
+	text-align: center;
+	border: 2px dotted #cdcdcd;
+}
+
+#tletitle1 {
+	width: 579px;
+	height: 53px;
+	font-size: 14px;
+	float: left;
+	margin: 20px 50px;
+	text-align: center;
+	border: 2px dotted #cdcdcd;
+}
+
+#tlephoto {
+	width: 232px;
+	height: 216px;
+	font-size: 24px;
+	float: left;
+	text-align: center;
+	margin: 20px 0 0 50px;
+	position: relative;
+	border: 2px dotted #cdcdcd;
+}
+
+#hipt {
+	width: 232px;
+	height: 216px;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#tlecontent {
+	width: 327px;
+	height: 216px;
+	font-size: 18px;
+	float: right;
+	text-align: center;
+	margin: 20px 50px 0 0;
+	border: 2px dotted #cdcdcd;
+}
+
+#tlephoto1 {
+	width: 232px;
+	height: 154px;
+	font-size: 24px;
+	float: left;
+	position: relative;
+	text-align: center;
+	margin: 20px 0 0 50px;
+	border: 2px dotted #cdcdcd;
+}
+
+#hipt1 {
+	width: 232px;
+	height: 154px;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#tlecontent1 {
+	width: 327px;
+	height: 154px;
+	font-size: 18px;
+	float: right;
+	text-align: center;
+	margin: 20px 50px 0 0;
+	border: 2px dotted #cdcdcd;
+}
+
+#tlephoto2 {
+	width: 232px;
+	height: 154px;
+	font-size: 24px;
+	float: left;
+	position: relative;
+	text-align: center;
+	margin: 20px 0 0 50px;
+	border: 2px dotted #cdcdcd;
+}
+
+#hipt2 {
+	width: 232px;
+	height: 154px;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#tlecontent2 {
+	width: 327px;
+	height: 154px;
+	font-size: 18px;
+	float: right;
+	text-align: center;
+	margin: 20px 50px 0 0;
+	border: 2px dotted #cdcdcd;
+}
+
+#tlestate {
+	display: none;
+}
+
+#tleid {
+	display: none;
+}
+
+.h_wrap .h_top select {
+	display: inline-block;
+	float: left;
+	height: 30px;
+	color: #585858;
+	font-size: 16px;
+	margin: 20px 0 0 400px;
+	border: none;
+}

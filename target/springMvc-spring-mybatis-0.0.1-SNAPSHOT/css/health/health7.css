@@ -1,0 +1,132 @@
+.h_wrap .h_bottom .h_left .h_leftcon {
+    width: 583px;
+    height: 802px;
+    margin-top: 55px;
+    margin-left: 52px;
+    font-size: 29.72px;
+    font-family: "黑体 Regular";
+    color: #636363;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon #tletitle {
+    float: left;
+    width: 314px;
+    height: 57px;
+    font-size: 24px;
+    border: 2px dotted #cdcdcd;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon #tletitle1 {
+    float: left;
+    width: 583px;
+    height: 57px;
+    font-size: 14px;
+    margin-top: 38px;
+    border: 2px dotted #cdcdcd;
+    text-align: center;
+    cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon #tle_box3 {
+    float: left;
+    width: 583px;
+    height: 204px;
+    margin-top: 42px;
+    overflow: hidden;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon #tle_box3 #tlecontent {
+    width: 315px;
+    height: 200px;
+    font-size: 18px;
+    border: 2px dotted #cdcdcd;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon #tle_box3 #tlephoto {
+    width: 245px;
+    height: 200px;
+    font-size: 24px;
+    margin-left: 15px;
+    border: 2px dotted #cdcdcd;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon #tle_box4 {
+    float: left;
+    width: 583px;
+    height: 204px;
+    margin-top: 42px;
+    overflow: hidden;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon #tle_box4 #tlephoto1 {
+    width: 245px;
+    height: 200px;
+    font-size: 24px;
+    border: 2px dotted #cdcdcd;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon #tle_box4 #tlecontent1 {
+    width: 315px;
+    height: 200px;
+    font-size: 18px;
+    border: 2px dotted #cdcdcd;
+    margin-left: 15px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon #tlecontent2 {
+    height: 53px;
+    width: 579px;
+    font-size: 18px;
+    border: 2px dotted #cdcdcd;
+    text-align: center;
+    margin-top: 42px;
+    float: left;
+    cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon #tleid {
+    display: none;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon #tlestate {
+    display: none;
+}
+
+.h_wrap .h_top select {
+    display: inline-block;
+    float: left;
+    height: 30px;
+    color: #585858;
+    font-size: 16px;
+    margin: 20px 0 0 400px;
+    border: none;
+}
+
+/***********************************************************************/
+
+#d_photo {
+    width: 245px;
+    height: 200px;
+    line-height: 200px;
+    margin-top: -36px;
+    border: 2px dotted #cdcdcd;
+    opacity: 0;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}

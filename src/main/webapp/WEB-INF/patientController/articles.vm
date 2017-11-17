@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>健康资讯</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/information.css">
+    <link rel="stylesheet" type="text/css" href="../css/public_page.css">
+    <link rel="stylesheet" type="text/css" href="../css/page.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/page.js"></script>
+
+</head>
+<body>
+<div id="l_head">
+    <div id="l_head_up">
+        <div class="l_outer">
+            <p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+        </div>
+    </div>
+    <div id="l_head_down">
+        <div class="l_outer">
+            <p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+            <ul class="l_nav">
+                <li><a href="classify.do">患者分类</a></li>
+                <li><a href="input.do">健康报表</a></li>
+                <li style="background: #e5e5e4;border-bottom: 4px solid #00a85f;"><a href="template.do">健康资讯</a></li>
+                <li><a href="message.do">消息提醒</a></li>
+                <li><a>权限管理</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="c_warp">
+    <ul class="c_breadcrumb">
+        <li><a href="template.do">健康资讯</a>&gt;</li>
+    ##<li><a href=""></a></li>
+        <li><a href="" class="c_bselect">资讯列表</a></li>
+    </ul>
+    <div class="c_conter c_conter1">
+        <div class="c_addlist">
+            <button id="c_add" onclick="location.href='temps.do?tid=${tleid}'">添加</button>
+        </div>
+        <div class="c_tw">
+            <table class="c_tadu" border="1">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="400px">标题</th>
+                    <th width="150px">修改时间</th>
+                    <th width="80px">分类</th>
+                    <th width="120px" colspan="2">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                    #foreach($li in $list)
+
+                    <tr>
+                        <input type="hidden" value="${li.get("_id")}" name="_id">
+                        <td></td>
+                        <td>$!{li.get("tletitle")}</td>
+                        <td>$!{li.get("date")}</td>
+                        #if($!{li.get("types")}=="1")
+                            <td>健康咨询</td>
+                        #elseif($!{li.get("types")}=="2")
+                            <td>社区活动</td>
+                        #elseif($!{li.get("types")}=="3")
+                            <td>健康饮食</td>
+                        #elseif($!{li.get("types")}=="4")
+                            <td>生活习惯</td>
+                        #else
+                            <td>养生健康</td>
+                        #end
+                        <td>
+                            <button id="c_upd" onclick="location.href='update.do?id=${li.get("_id")}'">修改</button>
+                        </td>
+                        <td>
+                            #if("1"==${li.get("tlestate")})
+                                <button id="c_ent" style="background: #ccc;"
+                                        onclick="location.href='pullpage.do?id=${li.get("tleid")}&lid=${li.get(
+                                            "_id")}'">撤回
+                                </button>
+                            #else
+                                <button id="c_ent"
+                                        onclick="location.href='pushpage.do?id=${li.get("tleid")}&lid=${li.get(
+                                            "_id")}'">推送
+                                </button>
+                            #end
+                            </button>
+                        </td>
+
+                    </tr>
+                    #end
+                </tbody>
+            </table>
+            <div id="fy">
+                <ul class="page" maxshowpageitem="5" pagelistcount="10" id="page"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="l_foot">
+    <p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+<script type="text/javascript">
+    jQuery(function () {
+        var len = jQuery('table tr').length;
+        for (var i = 1; i < len; i++) {
+            jQuery('table tr:eq(' + i + ') td:first').text(i);
+        }
+    });
+
+</script>
+<script type="text/javascript">
+
+    var GG = {
+        "kk": function (mm) {
+            window.location.href = 'articles.do?id=${tleid}&startRecord=' + (10 * (mm - 1)) + '&pageSize=' + 10 + '&currentPage=' + mm;
+        }
+    }
+    jQuery("#page").initPage($count,$page.currentPage , GG.kk);
+</script>
+</body>
+</html>

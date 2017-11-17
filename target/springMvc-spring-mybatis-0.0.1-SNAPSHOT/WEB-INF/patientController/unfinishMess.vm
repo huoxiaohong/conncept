@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" href="../../css/news/news.css">
+<link rel="stylesheet" type="text/css" href="../../css/news/ybf.css">
+<link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+<script src="../../js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<div id="y_wrap">
+	<div id="l_head">
+		<div id="l_head_up">
+			<div class="l_outer">
+				<p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+			</div>
+			
+		</div>
+		<div id="l_head_down">
+			<div class="l_outer">
+				<p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+				<ul class="l_nav">
+					<li><a href="classify.do">患者分类</a></li>
+					<li><a href="input.do">健康报表</a></li>
+					<li><a href="template.do">健康资讯</a></li>
+					<li><a href="message.do">消息提醒</a></li>
+					<li><a>权限管理</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	</div>
+	<div class="y_nav">
+		<a href="">消息提醒</a>&nbsp;&gt;
+		<a href="unfinish.do">未完成</a>&nbsp;&gt;
+		<a href="" class="y_selea">健康报告单</a>
+	</div>
+	<div class="y_con">
+		<h2 id="y_title">康赛玉环功能社区体检健康报告</h2>
+		<h5 id="y_no">NO：WJ2017-W-19843</h5>
+		<table width="657" border="1" id="y_mytable">
+			<tr>
+				<th colspan="2">姓名</th>
+				<th>李富贵</th>
+				<th>性别</th>
+				<th>男</th>
+				<th>年龄</th>
+				<th>29</th>
+			</tr>
+			<tr>
+				<td colspan="2">单位</td>
+				<td colspan="3">北京市中盛环球有限公司</td>
+				<td>样本编号</td>
+				<td>10243</td>
+			</tr>
+			<tr>
+				<td colspan="2">所属医院</td>
+				<td colspan="3">北京市海淀区医院</td>
+				<td>标本类型</td>
+				<td>血常规</td>
+			</tr>
+			<tr>
+				<td colspan="2">所属社区</td>
+				<td colspan="3">北京市海淀区景园社区</td>
+				<td>检验类别</td>
+				<td>血液</td>
+			</tr>
+			<tr>
+				<td rowspan="5"style="width:27px;">检验内容</td>
+				<td>序号</td>
+				<td>检验项目</td>
+				<td>提示</td>
+				<td>测定值</td>
+				<td>参考值</td>
+				<td>单位</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>淋巴细胞计数</td>
+				<td>下降</td>
+				<td>3.5</td>
+				<td>0.8-4</td>
+				<td>10-9/L</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>淋巴细胞计数</td>
+				<td>下降</td>
+				<td>3.5</td>
+				<td>0.8-4</td>
+				<td>10-9/L</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>淋巴细胞计数</td>
+				<td>下降</td>
+				<td>3.5</td>
+				<td>0.8-4</td>
+				<td>10-9/L</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>淋巴细胞计数</td>
+				<td>下降</td>
+				<td>3.5</td>
+				<td>0.8-4</td>
+				<td>10-9/L</td>
+			</tr>
+			<tr>
+				<td colspan="7">检验结论</td>
+			</tr>
+			<tr style="height: 166px;">
+				<td colspan="7" id="y_jielun">红细胞沉降率(ESR):参考值:男性0～15mm/h,女性0～20mm/h,60岁以上男女老人的上限分别为24和34mm/h.</td>
+			</tr>
+		</table>
+		<div class="y_btn" id="y_tijiao">提交</div>
+		<div class="y_btn" id="y_bianji">编辑</div>
+		<div id="y_aside">
+			<p id="y_zidian"></p>
+			<p id="y_ganyu"></p>
+		</div>
+	</div>	
+</div>
+<div id="l_foot">
+		<p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+<script src="../../js/ybf.js"></script>
+</body>
+</html>

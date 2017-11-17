@@ -1,0 +1,96 @@
+/*
+* @Author: Marte
+* @Date:   2017-06-21 21:12:53
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-07-11 10:24:36
+*/
+.c_warp {
+	min-width: 1100px;
+}
+
+.c_warp .c_conter {
+	width: 1099px;
+	height: 718px;
+	margin: 28px auto 0;
+	border: 1px solid #fff;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0px 0px 25px 0px rgba(220, 220, 220, 0.7);
+}
+
+.c_conterl {
+	width: 157px;
+	height: 666px;
+	border-right: 2px solid #b9b9b9;
+	margin-top: 26px;
+	float: left;
+}
+
+.c_conterl .c_tit {
+	font-family: "Adobe 黑体 Std R", "黑体 Regular";
+	font-size: 18px;
+	color: #404040;
+	margin-left: 27px;
+}
+
+.c_conterl .c_nvg {
+	font-family: "黑体 Regular";
+	font-size: 18px;
+	margin-top: 32px;
+	margin-left: 27px;
+}
+
+.c_conterl .c_nvg a {
+	color: #585858;
+	display: block;
+	margin-bottom: 22px;
+}
+
+/* .c_conterl .c_nvg .c_nvgl{
+    color:#69be94;
+} */
+.c_conterl .c_nvg .c_nvgo {
+	color: #69be94;
+}
+
+.c_conterr {
+	float: left;
+}
+
+.c_conterr .c_conterrbb {
+	height: 535px;
+	margin-left: 45px;
+	margin-top: 77px;
+}
+
+.c_conterr .c_conterrbb #table3 {
+	margin: 20px 25px;
+	font-size: 20px;
+}
+
+.c_conterr .c_conterrbb #table3 caption {
+	padding: 20px;
+	font-size: 25px;
+}
+
+#tablereport4 {
+	/*margin :  0 20px 0 20px ;*/
+	margin-top: -40px;
+	font-size: 16px;
+}
+
+#tablereport4 caption {
+	padding: 10px;
+	font-size: 20px;
+}
+
+#tablereport2 {
+	/*margin :  0 20px 0 20px ;*/
+	margin-top: -40px;
+	font-size: 16px;
+}
+
+#tablereport2 caption {
+	padding: 10px;
+	font-size: 20px;
+}

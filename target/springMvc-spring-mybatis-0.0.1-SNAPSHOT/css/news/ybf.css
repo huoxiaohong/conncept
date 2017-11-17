@@ -1,0 +1,117 @@
+* {
+    color: #585858;
+    font-family: "黑体";
+}
+
+/* 导航样式 */
+.y_nav {
+    color: #3c3c3c;
+    font-weight: bold;
+    margin: 36px 0 0 50px;
+}
+
+.y_nav a {
+    font-size: 18px;
+    color: #3c3c3c;
+    font-weight: normal;
+}
+
+.y_nav .y_selea {
+    color: #248f60;
+}
+
+/* 内容样式 */
+.y_con {
+    width: 765px;
+    height: 855px;
+    margin: 68px auto;
+    padding-top: 29px;
+    -moz-box-shadow: 0px 0px 3px 3px rgba(241, 241, 241, 0.8), 0px 0px 6px 6px rgba(251, 251, 251, 0.6), 0px 0px 8px 8px rgba(254, 254, 254, 0.4);;
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(241, 241, 241, 0.8), 0px 0px 6px 6px rgba(251, 251, 251, 0.6), 0px 0px 8px 8px rgba(254, 254, 254, 0.4);;
+    box-shadow: 0px 0px 3px 3px rgba(241, 241, 241, 0.8), 0px 0px 6px 6px rgba(251, 251, 251, 0.6), 0px 0px 8px 8px rgba(254, 254, 254, 0.4);
+    position: relative;
+}
+
+#y_title {
+    text-align: center;
+    font-size: 22px;
+}
+
+#y_no {
+    margin: 20px 0 10px 85px;
+    font-size: 10px;
+}
+
+#y_mytable {
+    margin: auto;
+    margin-bottom: 36px;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 16px;
+}
+
+#y_mytable tr {
+    height: 50px;
+}
+
+.y_btn {
+    width: 68px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background: #248f60;
+    border-radius: 3px 3px;
+    cursor: pointer;
+
+}
+
+.y_btn:hover {
+    -webkit-filter: brightness(1.2);
+    filter: brightness(1.2);
+}
+
+.y_btn:active {
+    -webkit-filter: brightness(0.8);
+    filter: brightness(0.8);
+}
+
+#y_jielun {
+    text-align: left;
+    line-height: 1.5;
+    padding: 26px 28px;
+    vertical-align: top;
+}
+
+#y_bianji {
+    float: right;
+    margin-right: 32px;
+}
+
+#y_tijiao {
+    float: right;
+    margin-right: 54px;
+}
+
+/* 侧边样式 */
+#y_aside {
+    position: absolute;
+    right: -85px;
+    top: 30px;
+}
+
+#y_zidian {
+    width: 65px;
+    height: 75px;
+    background: url(../../images/news/images/04健康报告单高危_03.png) center center no-repeat;
+    cursor: pointer;
+}
+
+#y_ganyu {
+    margin-top: 12px;
+    width: 65px;
+    height: 75px;
+    background: url(../../images/news/images/03健康报告单患者_06.png) center center no-repeat;
+    cursor: pointer;
+}

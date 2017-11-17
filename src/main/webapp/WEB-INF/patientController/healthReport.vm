@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>健康报告单</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+    <link rel="stylesheet" type="text/css" href="../../css/l_main_page.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/l_main_page.js"></script>
+</head>
+<body>
+<div id="l_head">
+    <div id="l_head_up">
+        <div class="l_outer">
+            <p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+        </div>
+
+    </div>
+    <div id="l_head_down">
+        <div class="l_outer">
+            <p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+            <ul class="l_nav">
+                <li style="background: #e5e5e4;border-bottom: 4px solid #00a85f;"><a href="classify.do">患者分类</a></li>
+                <li><a href="input.do">健康报表</a></li>
+                <li><a href="template.do">健康资讯</a></li>
+                <li><a href="message.do">消息提醒</a></li>
+                <li><a>权限管理</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div id="l_hr_body">
+    <p id="l_hr_promote">
+        #if("1" == ${entity})
+            <a href="classify.do?entity=${entity}">高血压患者</a> &gt;
+        #elseif("2" == ${entity})
+            <a href="classify.do?entity=${entity}">高血压高危</a> &gt;
+        #elseif("3" == ${entity})
+            <a href="classify.do?entity=${entity}">糖尿病患者</a> &gt;
+        #elseif("4" == ${entity})
+            <a href="classify.do?entity=${entity}">糖尿病高危</a> &gt;
+        #elseif("5" == ${entity})
+            <a href="classify.do?entity=${entity}">高盐膳食高危</a> &gt;
+        #elseif("6" == ${entity})
+            <a href="classify.do?entity=${entity}">肥胖高危</a> &gt;
+        #elseif("7" == ${entity})
+            <a href="classify.do?entity=${entity}">高危人群</a> &gt;
+        #end
+        <a href="">健康报告单</a>
+    </p>
+    <div id="l_hr_outer">
+        <div class="l_hr_innerl">
+            <table class="table1">
+                <caption class="cap1">康赛玉环功能社区体检健康报告单</caption>
+                <caption class="cap2">NO : wj2017-W-19843</caption>
+                <tr>
+                    <td width="102px" colspan="2">姓名</td>
+                    <td width="125px">$!{healthDBObject.name}</td>
+                    <td width="68px">性别</td>
+                    #if('1'==$!{healthDBObject.sex})
+                        <td>男</td>
+                    #elseif('2'==$!{healthDBObject.sex})
+                        <td>女</td>
+                    #end
+                    <td width="94px">年龄</td>
+                    <td width="130px">$!{healthDBObject.age}</td>
+                </tr>
+                <tr>
+                    <td width="94px" colspan="2">单位</td>
+                    <td width="330px" colspan="3">$!{healthDBObject.company}</td>
+                    <td width="94px">样本编号</td>
+                    <td width="130px">$!{healthDBObject.sampleNo}</td>
+                </tr>
+                <tr>
+                    <td width="94px" colspan="2">所属医院</td>
+                    <td width="330px" colspan="3">$!{healthDBObject.hospital}</td>
+                    <td width="94px">样本类型</td>
+                    <td width="130px">$!{healthDBObject.symptom}</td>
+                </tr>
+                <tr>
+                    <td width="94px" colspan="2">所属社区</td>
+                    <td width="330px" colspan="3">$!{healthDBObject.community}</td>
+                    <td width="94px">检验类别</td>
+                    <td width="130px">$!{healthDBObject.testCategory}</td>
+                </tr>
+                <tr>
+                    <td width="36px" rowspan="5" style="font-size:16px">检查内容</td>
+                    <td width="58px">序号</td>
+                    <td width="125px">检测项目</td>
+                    <td width="68px">提示</td>
+                    <td width="142px">测定值</td>
+                    <td width="94px">参考值</td>
+                    <td width="130px">单位</td>
+                </tr>
+                <tr>
+                    <td width="58px">1</td>
+                    <td width="125px">$!{healthDBObject.item}</td>
+                    <td width="68px">$!{healthDBObject.hint}</td>
+                    <td width="142px">$!{healthDBObject.measure}</td>
+                    <td width="94px">$!{healthDBObject.reference}</td>
+                    <td width="130px">$!{healthDBObject.unit}</td>
+                </tr>
+                <tr>
+                    <td width="58px">2</td>
+                    <td width="125px">$!{healthDBObject.item}</td>
+                    <td width="68px">$!{healthDBObject.hint}</td>
+                    <td width="142px">$!{healthDBObject.measure}</td>
+                    <td width="94px">$!{healthDBObject.reference}</td>
+                    <td width="130px">$!{healthDBObject.unit}</td>
+                </tr>
+                <tr>
+                    <td width="58px">3</td>
+                    <td width="125px">$!{healthDBObject.item}</td>
+                    <td width="68px">$!{healthDBObject.hint}</td>
+                    <td width="142px">$!{healthDBObject.measure}</td>
+                    <td width="94px">$!{healthDBObject.reference}</td>
+                    <td width="130px">$!{healthDBObject.unit}</td>
+                </tr>
+                <tr>
+                    <td width="58px">4</td>
+                    <td width="125px">$!{healthDBObject.item}</td>
+                    <td width="68px">$!{healthDBObject.hint}</td>
+                    <td width="142px">$!{healthDBObject.measure}</td>
+                    <td width="94px">$!{healthDBObject.reference}</td>
+                    <td width="130px">$!{healthDBObject.unit}</td>
+                </tr>
+            </table>
+            <div id="conclusion">检验结论</div>
+            <form action="present.do" method="post">
+                <input type="hidden" name="_id" value="${id}"/>
+                <input type="hidden" name="entity" value="${entity}"/>
+                <input type="hidden" name="state" value="${healthDBObject.state}"/>
+                <textarea id="text" readonly name="onclusion">$!{healthDBObject.onclusion}</textarea>
+                <div class="btn">
+                    <div id="edit">编辑</div>
+                    <div id="submit">提交</div>
+                    <div id="tj"></div>
+                </div>
+                <div id="mask"></div>
+                <div class="promot">
+                    <h5 class="ts">提示</h5>
+                    <h5 class="xx">确认提交?</h5>
+                    <div id="yan">
+                        <input type="submit" value="确认" id="yes"/>
+                        <div id="no">取消</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="l_hr_innerr">
+            <a href="jump.do" class="a1"></a>
+            <a href="" class="a2"></a>
+        </div>
+    </div>
+</div>
+<div id="l_foot">
+    <p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#edit").click(function () {
+            var a = jQuery("#edit").html();
+            if (a == "编辑") {
+                jQuery.ajax({
+                    type: "post",
+                    url: "saveHealth.do?_id=${id}",
+                    data: {onclusion: jQuery('#text').val()},
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+                })
+            }
+        })
+    })
+</script>
+</body>
+</html>

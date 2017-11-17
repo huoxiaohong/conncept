@@ -1,0 +1,240 @@
+/*
+* @Author: Marte
+* @Date:   2017-06-21 21:12:53
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-07-04 19:21:15
+*/
+.c_warp{
+    min-width:1100px;
+}
+.c_warp .c_conter{
+    width:1099px;
+    height: 718px;
+    // background: #555;
+    margin:28px auto 0;
+    border:1px solid #fff;
+    position: relative;
+    overflow:hidden;
+    box-shadow: 0px 0px 25px 0px rgba(220, 220,220,0.7);
+}
+.c_conterl{
+    width:157px;
+    height:666px;
+    border-right:2px solid #b9b9b9;
+    margin-top:26px;
+    float: left;
+}
+.c_conterl .c_tit{
+    font-family: "Adobe 黑体 Std R","黑体 Regular";
+    font-size: 18px;
+    color:#404040;
+    margin-left: 27px;
+    /* margin-bottom: 32px; */
+
+}
+.c_conterl .c_nvg{
+    font-family:"黑体 Regular";
+    font-size: 18px;
+    color:#585858;
+    margin-top:32px;
+    margin-left:27px;
+}
+.c_conterl .c_nvg li{
+    margin-bottom:22px;
+}
+.c_conterl .c_nvg .c_nvgl{
+    color:#69be94;
+}
+.c_conterr{
+    float: left;
+    display: none;
+}
+.c_conterrb{
+    width:849px;
+    border-left: 1px solid #bfbfbf;
+    border-top: 1px solid #bfbfbf;
+    border-right:1px solid #bfbfbf;
+    margin-left:45px;
+    margin-top:77px;
+}
+.c_conterrb li{
+    border-bottom:1px solid #bfbfbf;
+    height:88px;
+    line-height:88px;
+    color:#757575;
+    position:relative;
+    overflow:hidden;
+}
+.c_conterrb li .c_conterrbs1{
+    font:normal 16px "黑体 Regular";
+    margin-left:25px;
+}
+.c_conterrb li .c_conterrbs2{
+    font:normal 16px "黑体 Regular";
+    margin-left:45px;
+
+}
+.c_conterrb li img{
+    width:60px;
+    height:24px;
+    margin-right: 24px;
+    margin-top:32px;
+    float: right;
+}
+.c_conterr2{
+    float: left;
+    margin-left:45px;
+    display: none;
+}
+
+.c_conterrs{
+    display: block;
+}
+ .c_pps{
+    margin-top:35px;
+
+}
+.c_pps #c_paixu{
+    position: absolute;
+    right:184px;
+    top:3px;
+    width: 90px;
+    font-size: 16px;
+    color:#404040;
+    box-sizing: border-box;
+    font-family: "黑体";
+}
+.c_pps #c_pdown{
+    font-size: 18px;
+    height: 22px;
+    cursor: pointer;
+    background: url(../images/s_down.png) 80px 7px no-repeat;
+}
+.c_pps .c_pp{
+    display: none;
+}
+.c_pps .c_pp li{
+    height: 31px;
+    text-align: center;
+    line-height: 31px;
+    background: #fff;
+}
+.c_pps .c_pp li:hover{
+    background: #f1f1f1;
+}
+ .c_conterr2 .c_pps .c_ppsss{
+    position:absolute;
+    right:0px;
+    bottom: 0px;
+ }
+ .c_conterr2 .c_pps .c_ppspl{
+    position:absolute;
+    right:93px;
+    bottom: 0px;
+ }
+ .c_conterr2 .c_pps select{
+    display: none;
+    width:94px;
+    height:18px;
+    position:absolute;
+    right:184px;
+    bottom: 5px;
+ }
+ .c_pps img{
+    cursor:pointer;
+ }
+.c_tw{
+    width:851px;
+    height:535px;
+    margin:18px auto 0;
+}
+ .c_tadu{
+    width:849px;
+    border:solid thin #bfbfbf;
+    text-align: center;
+
+
+}
+.c_tadu th,td{
+    border-color: #dfdfdf;
+}
+ .c_tadu th{
+    height:40px;
+    // line-height:40px;
+    background: #29ab72;
+    font:normal 18px "Adobe 黑体 Std R";
+    color: #ffffff;
+}
+ .c_tadu td{
+    height:40px;
+    // line-height:40px;
+    font:normal 16px "黑体 Regular";
+    color:#818181;
+}
+ .c_tadu td img{
+    width:68px;
+    height:26px;
+}
+ /* 以下是数据库页面样式 */
+ // .c_pps .c_ppsctn1{
+ //    width:60px;
+ //    height:24px;
+ //    padding:0;
+ //    font:normal 18px "Adobe 黑体 Std R";
+ //    color:#fff;
+ //    background: #248f60;
+ // }
+ .c_pps{
+    position:relative;
+    height:24px;
+ }
+
+ .c_pps .c_ppsss{
+    position:absolute;
+    right:46px;
+    bottom: 0px;
+ }
+ .c_pps .c_ppspl{
+    position:absolute;
+    right:139px;
+    bottom: 0px;
+ }
+  #c_pps .c_paixu{
+    right:230px;
+ }
+ .c_pps select{
+    display: none;
+    width:94px;
+    height:18px;
+    position:absolute;
+    right:230px;
+    bottom: 5px;
+ }
+ .c_breadcrumb{
+    width:1100px;
+    margin: 37px auto 0;
+    position:relative;
+    overflow:hidden;
+ }
+.c_breadcrumb li{
+    float: left;
+}
+.c_breadcrumb li a{
+    font:normal 18px "Adobe 黑体 Std R";
+    color:#585858;
+    margin-right:9px;
+    margin-left:9px;
+}
+.c_breadcrumb .c_bselect{
+    color:#248f60;
+}
+.c_warp .c_conter1{
+    margin-top:15px;
+}
+// .c_tadu1{
+//     margin:18px auto 0;
+// }
+.c_page{
+    width:500px;
+    margin:49px auto 0;
+}

@@ -1,0 +1,157 @@
+.input {
+	width: 232px;
+	height: 200px;
+	float: left;
+	border: 2px dotted #cdcdcd;
+	cursor: pointer;
+	margin-top: -135px;
+	margin-left: -56px;
+	opacity: 0;
+}
+
+#myeditable-h3 {
+	width: 327px;
+	height: 216px;
+	text-align: center;
+	/*  line-height: 216px; */
+	float: right;
+	clear: both;
+	cursor: pointer;
+	margin: 0 auto;
+}
+
+#myeditable-h4 {
+	width: 327px;
+	height: 154px;
+	text-align: center;
+	/*  line-height: 216px; */
+	float: right;
+	clear: both;
+	cursor: pointer;
+	margin: 0 auto;
+}
+
+#myeditable-h5 {
+	width: 327px;
+	height: 154px;
+	text-align: center;
+	/*  line-height: 216px; */
+	float: right;
+	clear: both;
+	cursor: pointer;
+	margin: 0 auto;
+}
+
+#tletitle {
+	height: 100px;
+	width: 579px;
+	font-size: 24px;
+	border: 2px dotted #cdcdcd;
+	text-align: center;
+	/* line-height: 100px; */
+	clear: both;
+	float: left;
+	cursor: pointer;
+}
+
+#tletitle {
+	text-align: center;
+	/* line-height: 100px; */
+	clear: both;
+}
+
+.h-lefttop {
+	width: 300px;
+	height: 330px;
+	font-size: 14px;
+	float: left;
+	margin-top: 28px;
+}
+
+#tletitle1 {
+	border: 2px dotted #cdcdcd;
+	width: 305px;
+	height: 100px;
+	font-size: 18px;
+	/*  line-height: 70px ; */
+	text-align: center;
+}
+
+#tlecontent {
+	width: 300px;
+	height: 195px;
+	border: 2px dotted #cdcdcd;
+	float: left;
+	font-size: 18px;
+	margin-top: 30px;
+	text-align: center;
+	/* line-height: 180px; */
+}
+
+#tlephoto {
+	width: 265px;
+	border: 2px dotted #cdcdcd;
+	height: 328px;
+	float: left;
+	text-align: center;
+	font-size: 18px;
+	/*  line-height: 300px; */
+	margin-left: 320px;
+	margin-top: -330px;
+}
+
+#tlecontent1 {
+	width: 579px;
+	height: 120px;
+	border: 2px dotted #cdcdcd;
+	text-align: center;
+	font-size: 18px;
+	/*  line-height: 120px; */
+	float: left;
+	margin-top: 30px;
+}
+
+#tlephoto1 {
+	width: 579px;
+	height: 100px;
+	border: 2px dotted #cdcdcd;
+	text-align: center;
+	font-size: 18px;
+	/*  line-height: 120px; */
+	float: left;
+	margin-top: 30px;
+}
+
+#myedith-title2 {
+	text-align: center;
+	height: 100px;
+	/*  line-height: 100px; */
+}
+
+#input {
+	width: 265px;
+	height: 331px;
+	float: left;
+	cursor: pointer;
+	border: 2px dotted red;
+	margin-top: -22px;
+	opacity: 0;
+}
+
+#tlestate {
+	display: none;
+}
+
+#tleid {
+	display: none;
+}
+
+.h_wrap .h_top select {
+	display: inline-block;
+	float: left;
+	height: 30px;
+	color: #585858;
+	font-size: 16px;
+	margin: 20px 0 0 400px;
+	border: none;
+}

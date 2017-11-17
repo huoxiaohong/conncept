@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>健康资讯</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../css/health/health.css">
+    <link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+</head>
+</head>
+<body>
+<div id="l_head">
+    <div id="l_head_up">
+        <div class="l_outer">
+            <p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+        </div>
+
+    </div>
+    <div id="l_head_down">
+        <div class="l_outer">
+            <p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+            <ul class="l_nav">
+                <li><a href="classify.do">患者分类</a></li>
+                <li><a href="input.do">健康报表</a></li>
+                <li style="background: #e5e5e4;border-bottom: 4px solid #00a85f;"><a href="template.do">健康资讯</a></li>
+                <li><a href="message.do">消息提醒</a></li>
+                <li><a>权限管理</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="h_wrap">
+    <div class="h_top">
+        <h5>健康资讯模板</h5>
+    </div>
+    <ul>
+        <a href="articles.do?id=1">
+            <li class="h_ptoleft">
+                <img src="../../images/health/health_01.jpg" alt="">
+            </li>
+        </a>
+        <a href="articles.do?id=2">
+            <li class="h_ptocon">
+                <img src="../../images/health/health_02.jpg" alt="">
+            </li>
+        </a>
+        <a href="articles.do?id=3">
+            <li class="h_ptocon">
+                <img src="../../images/health/health_03.jpg" alt="">
+            </li>
+        </a>
+        <a href="articles.do?id=4">
+            <li class="h_ptoright">
+                <img src="../../images/health/health_04.jpg" alt="">
+            </li>
+        </a>
+        <a href="articles.do?id=5">
+            <li class="h_ptoleft">
+                <img src="../../images/health/health_05.jpg" alt="">
+            </li>
+        </a>
+        <a href="articles.do?id=6">
+            <li class="h_ptocon">
+                <img src="../../images/health/health_06.jpg" alt="">
+            </li>
+        </a>
+        <a href="articles.do?id=7">
+            <li class="h_ptocon">
+                <img src="../../images/health/health_07.jpg" alt="">
+            </li>
+        </a>
+    </ul>
+</div>
+<div id="l_foot">
+    <p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+</body>
+</html>

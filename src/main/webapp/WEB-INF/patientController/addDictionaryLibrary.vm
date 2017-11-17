@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>添加</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="css/cz.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public_page.css">
+</head>
+<body>
+<div id="l_head">
+    <div id="l_head_up">
+        <div class="l_outer">
+            <p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+        </div>
+
+    </div>
+    <div id="l_head_down">
+        <div class="l_outer">
+            <p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+            <ul class="l_nav">
+                <li style="background: #e5e5e4;border-bottom: 4px solid #00a85f;"><a href="classify.do">患者分类</a></li>
+                <li><a href="input.do">数据交换</a></li>
+                <li><a href="template.do">健康资讯</a></li>
+                <li><a href="message.do">消息提醒</a></li>
+                <li><a>权限管理</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="w_head">
+    <a href="classify.do" class="w_a1"> 患者分类&gt;</a>
+    <a href="classify.do" class="w_a1"> 高血压患者 &gt;</a>
+    <a href="report.do" class="w_a1"> 健康报告单 &gt;</a>
+    <span class="w_a2"> 字典库</span>
+</div>
+<div class="w_tjmid">
+    <div class="w_midh">
+			<textarea name="" id="" onfocus="if(value=='名称'){value=''}"
+                      onblur="if (value ==''){value='名称'}">名称</textarea>
+    </div>
+    <div class="w_midm">
+			<textarea name="" id="" onfocus="if(value=='内容详情'){value=''}"
+                      onblur="if (value ==''){value='内容详情'}">内容详情</textarea>
+    </div>
+    <div class="w-midf">
+        <a href="addDictionaryDatabase.do"></a>
+    </div>
+</div>
+<div id="l_foot">
+    <p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+</body>
+</html>

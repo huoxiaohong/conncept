@@ -1,0 +1,179 @@
+#set( $basepath = "${basepath}" )
+#set( $basePath = "${basepath}" )
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>模板二</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    #parse("template/head.vm")
+    <script src="$basepath/components/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="$basepath/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="$basepath/css/public_page.css">
+    <link rel="stylesheet" href="$basepath/css/health/health.css">
+    <link rel="stylesheet" href="$basepath/css/health/health2.css">
+    <script src='$basepath/tinymce/tinymce.min.js'></script>
+
+    #if('view'!=$!{stateMap.sta})
+        <script type="text/javascript">
+            tinymce.init({
+                selector: '.myeditablediv',
+                inline: true
+            });
+        </script>
+    #end
+
+</head>
+<body>
+<div id="l_head">
+    <div id="l_head_up">
+        <div class="l_outer">
+            <p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+        </div>
+
+    </div>
+    <div id="l_head_down">
+        <div class="l_outer">
+            <p class="l_logo"><img src="$basePath/images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+            <ul class="l_nav">
+                <li><a href="../classify.do">患者分类</a></li>
+                <li><a href="../input.do">健康报表</a></li>
+                <li style="background: #e5e5e4;border-bottom: 4px solid #00a85f;"><a href="../template.do">健康资讯</a></li>
+                <li><a href="../message.do">消息提醒</a></li>
+                <li><a href="">权限管理</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<form method="post"
+      action="../#if('add'!=${stateMap.sta})viewpage.do?id=$!{parmMap.tleid}#{else}addpage.do?id=$!{parmMap.tleid}#end">
+    <div class="h_wrap">
+        <div class="h_top">
+            <a href="../template.do"><h5>健康资讯模板&nbsp;&gt;&nbsp;</h5></a>
+            <p>模板二</p>
+            <select name="types">
+                <option value="1" #if('1'==${parmMap.types})selected#end>健康咨询</option>
+                <option value="2" #if('2'==${parmMap.types})selected#end>社区活动</option>
+                <option value="3" #if('3'==${parmMap.types})selected#end>健康饮食</option>
+                <option value="4" #if('4'==${parmMap.types})selected#end>生活习惯</option>
+                <option value="5" #if('5'==${parmMap.types})selected#end>养生健康</option>
+            </select>
+        </div>
+        <div class="h_bottom">
+            <div class="h_left">
+                <div class="h_leftcon">
+                    <div id="tta">
+                    ### 上传开始0
+                        <input type="hidden" name="tlephoto" id="tlehxh_tempimg_hid" value="$!{parmMap.tlephoto}">
+                        <div id="tlephoto" class="btn btn-default btn-sm fileinput-button">
+                            <img src="$!{parmMap.tlephoto}"
+                                 class="col-sm-12 col-md-12"
+                                 alt="单击此处添加图片" id="img_courseCover"/>
+                            <input id="courseCoverUpload" type="file"
+                                   name="files[]" multiple="multiple"/ #if('view'==${stateMap.sta})disabled#end>
+                        </div>
+                    ## 上传进度0
+                    ### 上传结束0
+
+                        <div id="tletitle" class="myeditablediv">$!{parmMap.tletitle}</div>
+                        <div id="tletitle1" class="myeditablediv">$!{parmMap.tletitle1}</div>
+                        <div id="tlecontent" class="myeditablediv">$!{parmMap.tlecontent}</div>
+                        <div id="tlestate" class="myeditablediv">#if('view'==$!{stateMap.sta})1#{else}0#end</div>
+                    ##<div id="number" class="myeditablediv">$!{stateMap.number}</div>
+                        <div id="tleid" class="myeditablediv">$!{parmMap.tleid}</div>
+                        <input type="hidden" name="tletitle" value="$!{parmMap.tletitle}">
+                        <input type="hidden" name="tletitle1" value="$!{parmMap.tletitle1}">
+                        <input type="hidden" name="tlecontent" value="$!{parmMap.tlecontent}">
+                        <input type="hidden" name="tlestate" value="$!{parmMap.tlestate}">
+                        <input type="hidden" name="tleid" value="$!{parmMap.tleid}">
+                        <input type="hidden" name="_id" value="$!{parmMap.get("_id")}">
+                        <input type="hidden" name="number" value="$!{stateMap.number}">
+                    </div>
+                </div>
+            </div>
+            <div class="h_right">
+                <div class="h_rightcon">
+                    <h3>规则</h3>
+                    <p>标题字体统一为24号</p>
+                    <p>副标题字体统一为14号</p>
+                    <p>内容字体统一为18号</p>
+                    <p>图片必须要高清图</p>
+                </div>
+            </div>
+        </div>
+        <div class="h_button">
+            <input type="button" onclick="location.href='pushpage.do?lid=$!{parmMap.get("_id")}&id=$!{parmMap.tleid}'"
+                   value="推送" class="h_rightbtn" id="text" #if('view'!=${stateMap.sta})disabled#end>
+            <input type="submit" value="#if('view'==$!{stateMap.sta})修改#{else}保存#end" class="h_leftbtn" id="text">
+        </div>
+    </div>
+
+</form>
+
+
+<div id="l_foot">
+    <p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+
+<!-- Bootstrap core JavaScript
+     ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="$basepath/components/bootstrap/js/bootstrap.min.js"></script>
+<script src="$basepath/components/dashboard/assets/js/docs.min.js"></script>
+<script src="$basepath/components/jqueryupload/js/vendor/jquery.ui.widget.js"></script>
+<script src="$basepath/components/jqueryupload/js/jquery.iframe-transport.js"></script>
+<script src="$basepath/components/jqueryupload/js/jquery.fileupload.js"></script>
+<script src="$basepath/static/js/date.js"></script>
+<script>
+    jQuery(function () {
+        'use strict';
+        // Change this to the location of your server-side upload handler:
+        var url = '${basePath}/Uploadw/sui.do';##方法
+
+        // ## 课程封面上传脚本
+        $('#progress_ccu').hide();##进度条
+
+        $('#tlephoto').fileupload({ ##input
+            url: url,
+            dataType: 'json',
+            maxChunkSize: 5000000
+        }).on('fileuploadchunksend', function (e, data) {
+            $('#progress_ccu').show();
+        }).on('fileuploadchunkalways', function (e, data) {
+            console.log("always: ");
+        }).on('fileuploadprogressall', function (e, data) { ##显示所有进度条
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            var progressId = '#progress_ccu';
+            $('#progress_ccu .progress-bar').css(
+                    'width',
+                    progress + '%'
+            );
+            if (100 == progress) {
+                $('#progress_ccu').hide();
+                $('#progress_ccu .progress-bar').attr("style", 'width: 0%;');
+            }
+            console.log(data.contentRange + " process: " + data.loaded);
+        }).on('fileuploaddone', function (e, data) {
+            console.log("debug: " + JSON.stringify(data));
+            jQuery.each(data.result.files, function (index, file) {
+                if (data.total == file.size) { ##
+                    jQuery('#img_courseCover').attr('src', file.url + '#'
+                            + new Date().getTime());##换成 file url
+                    jQuery('#courseCover').attr('value', file.realName);
+                    jQuery('#tlehxh_tempimg_hid').attr('value', file.url);##隐藏的input
+
+                    //console.log(file.re)
+                }
+            });
+        }).on('fileuploadchunkfail', function (e, data) {
+            //console.log("fail: " + data.files);
+
+        }).prop('disabled', !jQuery.support.fileInput)
+                .parent().addClass(jQuery.support.fileInput ? undefined : 'disabled');
+    });
+</script>
+</body>
+</html>

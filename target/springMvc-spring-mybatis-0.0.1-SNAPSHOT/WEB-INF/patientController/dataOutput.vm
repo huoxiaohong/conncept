@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>数据导入</title>
+    <style>
+	    button{
+	        width:68px;
+	        height:27px;
+	        background:#ea701a;
+	        border: none;
+	        border-radius:5px;
+	        outline:0;
+	        color:#fffbeb;
+	        font-size:16px;
+	         font-family: "Adobe 黑体 Std R","黑体 Regular";
+	    }
+	</style>
+    <link rel="stylesheet" type="text/css" href="${basepath}/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="${basepath}/css/dataExchange.css">
+    <link rel="stylesheet" type="text/css" href="${basepath}/css/kkpager_orange.css">
+	<link rel="stylesheet" type="text/css" href="${basepath}/css/public_page.css">
+	<link rel="stylesheet" type="text/css" href="${basepath}/css/ss.css">
+    <link rel="stylesheet" type="text/css" href="${basepath}/css/style/checkbox.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/page.css"/>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/page.js"></script>
+    <script src="${basepath}/js/kkpager.js"></script>
+</head>
+<body>
+<div id="l_head">
+	<div id="l_head_up">
+		<div class="l_outer">
+			<p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+		</div>
+		
+	</div>
+	<div id="l_head_down">
+		<div class="l_outer">
+			<p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+			<ul class="l_nav">
+					<li><a href="classify.do">患者分类</a></li>
+					<li><a href="input.do">健康报表</a></li>
+					<li><a href="template.do">健康资讯</a></li>
+					<li><a href="unfinish.do">消息提醒</a></li>
+					<li><a>权限管理</a></li>
+			</ul>
+		</div>
+	
+	</div>
+</div>
+<div class="c_warp">
+    <div class="c_conter">
+        <div class="c_conterl">
+            <span class="c_tit">数据交换</span>
+            <div class="c_nvg">
+                <a href="input.do">数据导入</a>
+                <a href="toDataOutput.do" class="c_nvgo">数据导出</a>
+            </div>
+        </div>
+        <div class="c_conterr2">
+            <div class="c_pps">
+                <div id="c_paixu">
+                    <p id="c_pdown">排序方式</p>
+                    <ul class="c_pp" id="c_pp">
+                        <li>日期</li>
+                        <li>状态</li>
+                        <li>姓名</li>
+                    </ul>
+                </div>
+                <select id="c_sort">
+                    <option value="1">日期</option>
+                    <option value="2">状态</option>
+                    <option value="3">姓名</option>
+                </select>
+                <button class="c_ppsdc" id="c_ppsdc" style="display: none;">导出</button>
+                <button class="c_ppspl" id="c_ppspl" style="background:#218b5d;">批量</button>
+                <div id="c_sss">
+                    <input type="text" name="" id="ipt" autofocus>
+                    <button id="c_ss">搜索</button>
+                </div>
+            </div>
+            <div class="c_tw">
+                <table id="checkbox" class="c_tadu" border="1">
+                    <thead>
+                        <tr>
+                        	<th width="72px" class="c_dx" style="display: none;">
+                            	<p><span class="check_span"><input type="checkbox" id="checkAll" /></span>全选</p>
+                            </th>
+                            <th width="60px">序号</th>
+                            <th width="90px">姓名</th>
+                            <th width="400px">单位/社区/医院</th>
+                            <th width="108px">日期</th>
+                            <th width="90px">初检</th>
+                            <th width="96px" class="c_cz">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	#foreach($li in $outputList)
+                        <tr>
+                            <td class="c_dx1" class="c_dx1" style="display: none;">
+                            	<p><span class="check_span"><input type="checkbox" /></span></p>
+                            </td>
+                            <td>${li.id}</td>
+                            <td>${li.name}</td>
+                            <td>${li.community}</td>
+                            <td>${li.date}</td>
+                            <td><button style="background:#218b5d;">${li.condition}</button></td>
+                            <td class="c_cz"><button>导出</button></td>
+                        </tr> 
+                        #end 
+                    </tbody>
+                </table>
+                <div id="fy">
+	                <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+	            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="l_foot">
+	<p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+</div>
+<script type="text/javascript">
+    var GG = {
+        "kk":function(mm){
+            window.location.href='toDataOutput.do?startRecord='+(10*(mm-1))+'&pageSize='+10+'&currentPage='+mm;
+        }
+    }
+    $("#page").initPage($count,$page.currentPage,GG.kk);
+</script>
+<script src="../../js/jquery-1.8.3.min.js"></script> 
+<script src="../../js/checkbox.min.js"></script>
+<script>
+$(function(){
+	$("#checkbox").selectCheck();
+});
+</script>
+    <script type="text/javascript">
+	window.onload = function(){
+        var ipt = document.getElementById('ipt'); 
+        var sss = document.getElementById('c_sss'); 
+        var ppsdc = document.getElementById('c_ppsdc'); 
+        var down = document.getElementById('c_pdown');
+        var ppspl = document.getElementById('c_ppspl');
+        sss.onclick = function(e){
+            var e = event || window.event;
+            e.stopPropagation();
+            ipt.style.display="block";
+            down.style.display="none";
+            ppspl.style.display="none";
+            ipt.focus();
+
+        }
+        document.onclick = function(){
+            ipt.style.display="none";
+            down.style.display="block";
+            ppspl.style.display="block";
+        }
+    }
+        $('#c_ppspl').click(function(){
+            var div = $(".c_dx");
+            if ( div.css("display") === "none" ) {
+                div.show();
+            } else {
+                div.hide();
+            }
+            var div1 = $(".c_dx1");
+            if ( div1.css("display") === "none" ) {
+                div1.show();
+            } else {
+                div1.hide();
+            }
+
+            var div2 = $(".c_ppsdc");
+            if ( div2.css("display") === "none" ) {
+                div2.show();
+            } else {
+                div2.hide();
+            }
+            var div3 = $(".c_cz");
+            if ( div3.css("display") === "none" ) {
+                div3.show();
+            } else {
+                div3.hide();
+            }
+
+        });
+        function getParameter(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]); return null;
+        }
+        $(function(){
+            var totalPage=${count}/10;
+            var pageNo=getParameter('pno');
+            if(!pageNo){
+            pageNo = 1;
+            }
+            kkpager.generPageHtml({
+                //当前页码
+                pno:pageNo,
+                //总页码数
+                total:totalPage,
+                //是否显示首页按钮
+                isShowFirstPageBtn  : false,
+                //是否显示尾页按钮
+                isShowLastPageBtn   : false,
+                //是否显示当前页
+                isShowCurrPage      : false,
+
+                 //是否显示页码跳转输入框
+                isGoPage            : true,
+                //是否用span包裹住分页信息和跳转按钮
+                isWrapedInfoTextAndGoPageBtn : true,
+                //链接前部
+                hrefFormer : 'datainput',
+                //链接尾部
+                hrefLatter : '.html',
+                getLink : function(n){
+                return this.hrefFormer + this.hrefLatter + "?pno="+n;
+                },
+                lang:{
+                    currPageBeforeText      : '第',
+                }
+            });
+        });
+    </script>
+    <script src="../../js/dataExchange.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+#tlephoto {
+    width: 200px;
+    height: 200px;
+    float: left;
+    /*  line-height:200px; */
+    text-align: center;
+    font-size: 20px;
+    positon: relative;
+    margin: 45px 0 0 60px;
+    border: 2px dotted #cdcdcd;
+}
+
+#tlephoto .wj_input {
+    float: left;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 0px;
+    opacity: 0;
+}
+
+#tletitle {
+    width: 350px;
+    height: 50px;
+    float: right;
+    text-align: center;
+    font-size: 24px;
+    /* line-height:50px; */
+    margin: 70px 45px -40px 0px;
+    border: 2px dotted #cdcdcd;
+}
+
+#tletitle1 {
+    width: 350px;
+    height: 50px;
+    float: right;
+    font-size: 14px;
+    margin: 70px 45px -40px 0px;
+    text-align: center;
+    border: 2px dotted #cdcdcd;
+}
+
+#tlecontent {
+    width: 579px;
+    height: 230px;
+    float: left;
+    text-align: center;
+    /* line-height:230px; */
+    font-size: 18px;
+    margin: 20px 60px;
+    border: 2px dotted #cdcdcd;
+}
+
+#tlephoto1 {
+    width: 579px;
+    height: 150px;
+    float: left;
+    text-align: center;
+    /* line-height:150px; */
+    font-size: 20px;
+    position: relative;
+    margin: 20px 60px;
+    border: 2px dotted #cdcdcd;
+}
+
+#tlephoto1 #wj_inputt {
+    width: 579px;
+    height: 150px;
+    float: left;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+
+#tlecontent1 {
+    width: 579px;
+    height: 120px;
+    float: left;
+    text-align: center;
+    /* line-height:120px; */
+    font-size: 18px;
+    margin: 20px 60px;
+    border: 2px dotted #cdcdcd;
+}
+
+.h_wrap .h_bottom .h_left #tlestate {
+    display: none;
+}
+
+.h_wrap .h_bottom .h_left #tleid {
+    display: none;
+}
+
+.h_wrap .h_top select {
+    display: inline-block;
+    float: left;
+    height: 30px;
+    color: #585858;
+    font-size: 16px;
+    margin: 20px 0 0 400px;
+    border: none;
+}
+  

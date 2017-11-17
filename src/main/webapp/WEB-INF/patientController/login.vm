@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登录</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+
+	.w_bj{
+		
+	    background: url(../images/login.png) center center no-repeat;
+	    position: relative;
+	    background-size:cover;
+	}
+	.w_bjm{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -185px;
+		margin-left: -235px;
+		width: 470px;
+		height: 370px;
+        background-color: #ebe9e8;
+	}
+	.w_bjmm{
+		margin: 30px auto;
+		width: 350px;
+		font-size: 24px;
+		color: #585858;
+
+	}
+	.w_bjmm div{
+       height: 42px;
+       width: 350px;
+       margin-bottom: 10px;
+       margin-bottom: 30px;
+	}
+	.w_bjmm div img{
+        vertical-align: middle;
+        border: 0;
+	}
+	.w_bjmm div input{
+		width: 290px;
+		height: 40px;
+		border: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		vertical-align: middle;
+		color: #626262;
+
+	}
+	.w_bjmm .but{
+		background-color:#248f60;
+		color: #fff;
+		font-size: 24px;
+		width: 350px;
+		height: 46px;
+		text-align: center;
+		line-height: 46px;
+	}
+	.w_bjmm a{
+	    display: block;
+	    font-size: 16px;
+	    text-decoration: none;
+	    color: #626262;
+	    margin-left: 276px;
+	}
+	.w_bjmm p{
+	    font-size: 14px;
+	    text-decoration: none;
+	    color:red;
+	    text-align:center;
+	}
+	</style>
+
+</head>
+<body>
+	<div class="w_bj">
+		<div class="w_bjm">
+			<div class="w_bjmm">
+			  <form method="post" action="login.do">
+				<h3>登录</h3>
+				<div>
+					<img src="images/wyh.png" alt="">
+					<input type="text" name="user" placeholder="用户名/手机号" value="$!{map.user}">
+				</div>
+				<div>
+					<img src="../images/wmm.png" alt="">
+					<input type="password" placeholder="请输入密码" name="password" value="">
+				</div>
+				<p>$!{map.error}</p>
+				<input class="but" type="submit" value="登录">
+				<a href="">忘记密码</a>
+			  </form>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+        var bj=document.getElementsByClassName('w_bj');
+      
+        //console.log(document.documentElement.clientHeight);
+        bj[0].style.height=document.documentElement.clientHeight+'px';
+        
+       
+	</script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+@charset "utf-8";
+/*==================Reset_start===================*/
+body,h1,h2,h3,h4,h5,h6,div,p,dl,dt,dd,ol,ul,li,form,table,th,td,a,img,span,strong,var,em,input,textarea,select,option
+	{
+	margin: 0;
+	padding: 0;
+}
+
+html,body {
+	font-family: "微软雅黑", "宋体", Arail, Tabhoma;
+	font-size: 14px;
+	text-align: left;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+img {
+	border: 0;
+}
+
+input,select,textarea {
+	outline: 0;
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th,strong,var,em {
+	font-weight: normal;
+	font-style: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*根据项目需要，自行添加或删减重置内容*/
+/*==================Reset_End====================*/
+.h_wrap {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.h_wrap .h_top {
+	width: 1100px;
+	height: 62px;
+}
+
+.h_wrap .h_top h5 {
+	font-size: 18px;
+	font-weight: normal;
+	/* margin-top: 30px; */
+	padding-top: 25px;
+	color: #585858;
+	float: left;
+	font-family: "黑体 Regular";
+}
+
+.h_wrap .h_top p {
+	float: left;
+	font-size: 18px;
+	color: #248f60;
+	padding-top: 22px;
+	cursor: pointer;
+	font-family: "黑体 Regular";
+}
+
+.h_wrap ul {
+	overflow: hidden;
+	margin-bottom: 13px;
+}
+
+.h_wrap ul li {
+	width: 228px;
+	height: 330px;
+	float: left;
+	cursor: pointer;
+	margin-bottom: 34px;
+}
+
+.h_ptoleft {
+	margin-left: 13px;
+}
+
+.h_ptocon {
+	margin-left: 55px;
+}
+
+.h_ptoright {
+	margin-left: 60px;
+}
+
+/* =================The template 1============== */
+.h_wrap .h_bottom {
+	width: 1100px;
+	height: 1014px;
+	/* overflow: hidden; */
+}
+
+.h_wrap .h_bottom .h_left {
+	float: left;
+	width: 687px;
+	height: 932px;
+	box-shadow: -7px 0 10px #f2f2f2, 12px 0 10px #f2f2f2, 0 -5px 10px
+		#f2f2f2, 0 7px 10px #f2f2f2;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon {
+	width: 583px;
+	height: 802px;
+	margin-top: 55px;
+	margin-left: 52px;
+	/* background: #eee; */
+	font-size: 29.72px;
+	font-family: "黑体 Regular";
+	color: #636363;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lconp1 {
+	height: 53px;
+	width: 579px;
+	border: 2px dotted #cdcdcd;
+	text-align: center;
+	line-height: 53px;
+	float: left;
+	cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lconp2 {
+	margin-top: 38px;
+	height: 53px;
+	width: 579px;
+	border: 2px dotted #cdcdcd;
+	text-align: center;
+	line-height: 53px;
+	float: left;
+	cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lccon1 {
+	width: 583px;
+	height: 220px;
+	margin-top: 42px;
+	float: left;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lccon1 .h_lccleft1 {
+	width: 232px;
+	height: 216px;
+	float: left;
+	border: 2px dotted #cdcdcd;
+	cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lccon1 .h_lccleft1 span {
+	width: 122px;
+	height: 71px;
+	float: left;
+	margin-left: 54px;
+	margin-top: 73px;
+	cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lccon1 .h_lccleft1 img {
+	width: 232px;
+	height: 216px;
+	margin-top: -144px;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lccon1 .h_lccright1 {
+	width: 327px;
+	height: 216px;
+	text-align: center;
+	line-height: 216px;
+	float: right;
+	border: 2px dotted #cdcdcd;
+	cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lccon2 {
+	width: 583px;
+	height: 158px;
+	float: left;
+	margin-top: 35px;
+	cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lccon2 .h_lccleft2 {
+	width: 232px;
+	height: 154px;
+	float: left;
+	border: 2px dotted #cdcdcd;
+	cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lccon2 .h_lccleft2 span {
+	width: 122px;
+	height: 71px;
+	float: left;
+	margin-left: 54px;
+	margin-top: 40px;
+	cursor: pointer;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lccon2 .h_lccleft2 img {
+	width: 232px;
+	height: 154px;
+	margin-top: -111px;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lccon2 .h_lccright2 {
+	width: 327px;
+	height: 154px;
+	float: right;
+	border: 2px dotted #cdcdcd;
+	text-align: center;
+	line-height: 154px;
+}
+
+.h_wrap .h_bottom .h_left .h_leftcon .h_lccon3 {
+	margin-top: 38px;
+}
+
+.h_wrap .h_bottom .h_right {
+	float: left;
+	width: 369px;
+	height: 932px;
+	margin-left: 44px;
+	font-family: "黑体 Regular";
+	box-shadow: -7px 0 10px #f2f2f2, 12px 0 10px #f2f2f2, 0 -5px 10px
+		#f2f2f2, 0 7px 10px #f2f2f2;
+}
+
+.h_wrap .h_bottom .h_right .h_rightcon {
+	width: 242px;
+	height: 198px;
+	float: left;
+	margin-left: 29px;
+	margin-top: 41px;
+	color: #636363;
+}
+
+.h_wrap .h_bottom .h_right .h_rightcon h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.h_wrap .h_bottom .h_right .h_rightcon p {
+	float: left;
+	font-size: 18px;
+	background: url(../../images/health/images/health_gspot.png) 23px center
+		no-repeat;
+	background-size: 10px 10px;
+	padding-left: 44px;
+	margin-top: 17px;
+}
+
+.h_wrap .h_button {
+	float: right;
+	width: 194px;
+	height: 27px;
+	margin-bottom: 91px;
+	color: #fff;
+	font-size: 18px;
+	font-family: "黑体";
+}
+
+.h_wrap .h_button .h_leftbtn {
+	color: #fff;
+	text-align: center;
+	line-height: 27px;
+	font-size: 18px;
+	border: none;
+	float: left;
+	width: 81px;
+	height: 27px;
+	text-align: center;
+	line-height: 27px;
+	border-radius: 5px/5px;
+	background: #248f60;
+	cursor: pointer;
+	border: none;
+}
+
+.h_wrap .h_button .h_rightbtn {
+	float: right;
+	width: 81px;
+	height: 27px;
+	border: none;
+	text-align: center;
+	line-height: 27px;
+	border-radius: 5px/5px;
+	background: #248f60;
+	cursor: pointer;
+}
+
+/* ========================The template ======================== */
+.h_wrap .h_bottom .h_left textarea {
+	width: 583px;
+	height: 802px;
+	border: none;
+	font-size: 18px;
+}
+
+/* ========================black ======================== */
+#h_black {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #000;
+	opacity: 0.5;
+	z-index: 10;
+	display: none;
+}
+
+#h_popup {
+	width: 324px;
+	height: 138px;
+	background: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -69px;
+	margin-left: -162px;
+	z-index: 20;
+	font-family: "黑体";
+	display: none;
+}
+
+#h_popup .h_tishi {
+	width: 324px;
+	height: 34px;
+	background: #248f60;
+	color: #fff;
+	font-size: 22px;
+}
+
+#h_popup .h_tishi span {
+	float: left;
+	margin-top: 7px;
+	margin-left: 4px;
+}
+
+#h_popup .h_xunwen {
+	width: 324px;
+	height: 66px;
+	background: #ebe9e8;
+	color: #248f60;
+	font-size: 22px;
+	line-height: 66px;
+}
+
+#h_popup .h_xunwen span {
+	float: left;
+	/*
+        margin-top: 13px; */
+	margin-left: 47px;
+}
+
+#h_popup .h_chose {
+	width: 324px;
+	height: 38px;
+	background: #d0d0d0;
+}
+
+#h_popup .h_chose div {
+	width: 50px;
+	height: 27px;
+	border-radius: 5px/5px;
+	background: #248f60;
+	color: #fff;
+	margin-top: 6px;
+	text-align: center;
+	line-height: 27px;
+	font-size: 18px;
+}
+
+#h_yes {
+	width: 50px;
+	height: 27px;
+	border-radius: 5px/5px;
+	background: #248f60;
+	color: #fff;
+	margin-top: 6px;
+	text-align: center;
+	line-height: 27px;
+	font-size: 18px;
+	border: none;
+	float: right;
+	margin-right: 21px;
+	cursor: pointer;
+}
+
+#h_no {
+	margin-right: 11px;
+	float: right;
+	cursor: pointer;
+}

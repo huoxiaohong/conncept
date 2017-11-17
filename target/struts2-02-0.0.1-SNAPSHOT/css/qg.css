@@ -1,0 +1,59 @@
+@charset "utf-8";
+/*==================Reset_start===================*/
+body,h1,h2,h3,h4,h5,h6,div,p,dl,dt,dd,ol,ul,li,form,table,th,td,a,img,span,strong,var,em,input,textarea,select,option{margin: 0; padding: 0;}
+html,body{font-family: "微软雅黑","宋体",Arail,Tabhoma; font-size: 14px; text-align: left;}
+ul,ol{list-style: none;}
+img{border: 0;}
+input,select,textarea{outline:0;}
+textarea{resize:none; overflow: auto;}
+table{border-collapse: collapse; border-spacing: 0;}
+th,strong,var,em{font-weight: normal; font-style: normal;}
+a{text-decoration: none;}
+body{
+		margin:0 auto;
+		width: 1100px;
+	}
+.w_404{
+		   margin:0 auto;
+		   position: absolute;
+		   width: 1100px;
+		   height: 960px;
+	   }
+.w_404_img{
+	position: relative;
+	left: 50%;
+	margin-left: -214px;
+	margin-top: 120px;
+}
+.w_jiazai{
+		   margin:0 auto;
+		   position: absolute;
+		   width: 1100px;
+		   height: 960px;
+}
+.w_jzjz{
+	width: 360px;
+	height: 400px;
+	position: relative;
+	left: 50%;
+	margin-left: -180px;
+	margin-top: 120px;
+	overflow: hidden;
+}
+.w_img1{
+	float: left;
+    margin:0 auto;
+    margin-left: 34px;
+}
+.w_span1{
+	margin:0 auto;
+	height: 30px;
+	width: 360px;
+	 /* margin-top: 60px;  */
+	font-size: 30px;
+	display: block;
+	color: #5c5c5c;
+}
+.w_span1 a{
+	color: #008cd1;
+}

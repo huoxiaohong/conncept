@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>News_finished</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" href="../../css/news/news.css">
+<link rel="stylesheet" href="../../css/news/kkpager_orange.css">
+<link rel="stylesheet" type="text/css" href="../../css/public_page.css">
+</head>
+<body>
+	<div id="l_head">
+		<div id="l_head_up">
+			<div class="l_outer">
+				<p class="l_exit">欢迎您，<span>超级管理员</span><a href="">退出登陆</a></p>
+			</div>
+			
+		</div>
+		<div id="l_head_down">
+			<div class="l_outer">
+				<p class="l_logo"><img src="../../images/public_page/head_left_03.png" alt="康赛玉环功能社区"></p>
+				<ul class="l_nav">
+					<li><a href="classify.do">患者分类</a></li>
+					<li><a href="input.do">数据交换</a></li>
+					<li><a href="template.do">健康资讯</a></li>
+					<li><a href="unfinish.do">消息提醒</a></li>
+					<li><a>权限管理</a></li>
+
+				</ul>
+			</div>
+		
+		</div>
+	</div>
+	<div id="hh_wrap">
+		<div class="hh_left">
+			<p>消息提醒</p>
+			<a href="unfinish.do"><p>未完成</p></a>
+			<a href="finish.do"><p class="hh_default">已完成</p></a>
+		</div>
+		<div class="hh_right">
+		<div id="hh_paixu">
+				<p id="hh_pdown">排序方式</p>
+				<ul class="hh_pp">
+					<li><a href="finish.do?value=0">序号</a></li>
+					<li><a href="finish.do?value=1">姓名</a></li>
+					<li><a href="finish.do?value=2">日期</a></li>
+				</ul>
+			</div>
+			<div id="hh_saixuan">
+				<p id="hh_sdown">筛选</p>
+				<ul class="hh_ss">	
+					<li>单位</li>
+					<li>社区</li>
+					<li>医院</li>
+				</ul>
+			</div>
+			<div class="hh_rtop">
+				<p>搜索</p>
+				<select name="" id="hh_screen">
+					<option value="1">单位</option>
+					<option value="2">社区</option>
+					<option value="3">医院</option>
+				</select>
+				<select name="" id="hh_sort">
+					<option value="1">序号</option>
+					<option value="2" selected>姓名</option>
+					<option value="3">日期</option>
+				</select>
+			</div>
+			<div class="hh_rcon">
+				<table>
+					<tr>
+						<th>序号</th>
+						<th>姓名</th>
+						<th>症状</th>
+						<th>日期</th>
+						<th>初检</th>
+						<th>状态</th>
+					</tr>
+					 #foreach($mess in $message)
+					<tr>
+						<td>$!{mess.number}</td>
+						<td>$!{mess.name}</td>
+						<td>$!{mess.symptom}</td>
+						<td>$!{mess.date}</td>
+						<td>
+							<div>
+								$!{mess.inicheck}
+							</div>
+						</td>
+						<td>
+							<a href="javascript:">
+								<img class="hh_unfnsd" src="../../images/news/images/hh_fnsd.png" alt="">
+							</a>
+						</td>
+					</tr>
+					#end
+				</table>
+			</div>
+			<div class="hh_rbottom">
+                <div id="kkpager"></div>
+            </div>
+		</div>
+	</div>
+	<div id="l_foot">
+		<p>Copyright(C)2010-2018康赛体检版权所有 工信部备案号:.京ICP备15960842号</p>
+	</div>
+<script src="../../js/kkpager.js"></script>
+<script src="../../js/jquery-1.10.2.min.js"></script>
+<script src="../../js/news.js"></script>
+<script type="text/javascript">
+        function getParameter(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]); return null;
+        }
+        $(function(){
+            var totalPage=17;
+            var pageNo=getParameter('pno');
+            if(!pageNo){
+            pageNo = 1;
+            }
+            kkpager.generPageHtml({
+                pno:pageNo,
+                total:totalPage,
+                isShowFirstPageBtn  : false,
+                isShowLastPageBtn   : false,
+                isShowCurrPage      : false,
+                isGoPage            : true,
+                isWrapedInfoTextAndGoPageBtn : true,
+                hrefFormer : 'unfinished',
+                hrefLatter : '.html',
+                getLink : function(n){
+                return this.hrefFormer + this.hrefLatter + "?pno="+n;
+                },
+                lang:{
+                    currPageBeforeText      : '第',
+                }
+            });
+        });
+   </script>
+</script>
+</body>
+</html>
